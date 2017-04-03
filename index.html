@@ -73,160 +73,42 @@
     <div id="container">
       <div id="main">
 
-   
+  
+<section class="post" itemscope itemprop="blogitem">
+  
+    <a href="/2017/04/01/HelloWord/" title="HelloWord" itemprop="url">
+  
+    <h1 itemprop="name">HelloWord</h1>
     
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
+     
+           <p itemprop="description" >更新升级10.11 cocoapods安装出问题最简单的解决方法
+这是因为10.11把cocoapods直接干掉了
+sudo gem install -n /usr/local/bin cocoapods再加一句，完美解决sudo xcode-select –switch /Ap</p>
+        
     
-      <a href="/2017/04/01/HelloWord/" title="HelloWord" itemprop="url">HelloWord</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="李富鹏" target="_blank" itemprop="author">李富鹏</a>
-		
-  <p class="article-time">
-    <time datetime="2017-04-01T06:19:47.000Z" itemprop="datePublished"> Published 2017-04-01</time>
+    <time datetime="2017-04-01T06:19:47.000Z" itemprop="datePublished">2017-04-01</time>
+  </a>
+</section>
+
+
+
+
+
+
+  
+<section class="post" itemscope itemprop="blogitem">
+  
+    <a href="/2017/04/01/hello-world/" title="Hello World" itemprop="url">
+  
+    <h1 itemprop="name">Hello World</h1>
     
-  </p>
-</header>
-    <div class="article-content">
+     
+           <p itemprop="description" >Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the </p>
         
-        <p>更新升级10.11 cocoapods安装出问题最简单的解决方法</p>
-<p>这是因为10.11把cocoapods直接干掉了</p>
-<p>sudo gem install -n /usr/local/bin cocoapods<br>再加一句，完美解决<br>sudo xcode-select –switch /Applications/Xcode.app<br>使用CocoaPods做依赖管理，使我们的工程更加自动化的、集中的、简单直观的管理第三方开源库。你不用下载开源库的源代码引入工程，不用向工程中添加Framework，不用解决开源库和开源库以及开源库和工程之间的依赖、重复问题，也不用管开源库更新等一系列问题。有了CocoaPods，你只管任性，CocoaPods会为你做好一切。</p>
-<p>更新Ruby</p>
-<p>你需要会简单的使用命令行工具<br>CocoaPods唯一的限制就是在Ruby下运行，现在OS X都预装了Ruby，所以你只需要更新RubyGems到最新版本。<br>打开终端(control + space 真的很好用)，然后输入如下的命令：</p>
-<p>sudo gem update –system<br>会要你输入密码：<br>注意在终端中密码不显示字符，只要输完后按回车即可<br>用Ruby China替换Ruby的默认源,替换命令如下:</p>
-<p>gem sources –remove <a href="https://rubygems.org/" target="_blank" rel="external">https://rubygems.org/</a><br>//等有反应之后再敲入以下命令<br>gem sources -a <a href="https://gems.ruby-china.org/" target="_blank" rel="external">https://gems.ruby-china.org/</a><br>//验证是否替换成功可以执行<br>gem sources -l</p>
-<p>如图所示则证明替换成功<br>安装CocoaPods</p>
-<p>在终端中输入如下命令：</p>
-<p>sudo gem install cocoapods<br>安装过程是这样的：</p>
-<p>安装完成如上图所示<br>在终端中输入如下命令来完成安装：</p>
-<p>//将 CocoaPods Specs repository复制到你电脑上~/.cocoapods目录下<br>pod setup<br>它需要一点时间来完成，你等就是了<br>如果安装失败 ~/.cocoapods 里面是空的，就需要重新setup<br>命令如下：</p>
-<p>pod repo remove master<br>pod setup<br>完毕之后这个文件夹大概有 100多M，需要花费比较多时间，请耐心等待。<br>到这里你已经成功安装了CocoaPods！</p>
-<p>创建配置Podfile</p>
-<p>Xcode新建一个HelloWorld工程<br>打开终端，进入HelloWord工程目录下：</p>
-<p>//工程的路径也可以直接拖进来<br>cd /Users/lifupeng/Desktop/HelloWorld<br>在HelloWorld工程下创建一个默认的Podfile<br>执行命令：</p>
-<p>pod init<br>用Xcode打开Podfile命令：</p>
-<p>open -a Xcode Podfile<br>Podfile是这样的：</p>
-<p>Xcode打开Podfile<br>修改类库支持的最低iOS版本</p>
-<p>将# platform:ios, “6.0”修改成 ＃platform :ios, “7.0”<br>告诉CocoaPods你的工程是运行在iOS7下<br>为了让CocoaPods的引入不显示警告，在Podfile最上方加上：</p>
-<p>inhibit_all_warnings!<br>// 也可以单独设置打开编译警告就好了<br>pod ‘Alamofire’, ‘~&gt; 3.0.0-beta.3’, :inhibit_warnings =&gt; true<br>最后Podfile配置是这样的：</p>
-<p>Podfile配置<br>搜索第三方开源库</p>
-<p>以搜索AFNetworking为例，搜索命令如下：</p>
-<p>pod search AFNetworking<br>搜索结果如下：</p>
-<p>pod search AFNetworking结果</p>
-<p>把下面内容：</p>
-<p>pod ‘AFNetworking’, ‘~&gt; 2.5.0’<br>添加到Podfile中</p>
-<p>target ‘HelloWorld’ do</p>
-<p>pod ‘AFNetworking’, ‘~&gt; 2.5.0’</p>
-<p>end<br>然后保存关闭</p>
-<p>安装开源库到你的工程中。</p>
-<p>在终端中输入下面命令：（确保在终端的路径在项目目录下）：</p>
-<p>pod install</p>
-<p>至此 你已经成功的把AFNetworking添加到工程中了<br>[!] From now on use <code>ShowTracker.xcworkspace</code><br>正如上面的警告提醒，从现在开始，你必须使用HelloWorld.xcworkspace来打开该项目。</p>
-<p>为了让CocoaPods的引入不显示警告，在Podfile最上方加上：</p>
-<p>inhibit_all_warnings!<br>重新运行pod install，编译项目，此时你应该看到警告已经不显示了。</p>
-<p>PS: 对Podfile修改安装之后编译项目，可能会出现如下警告 ：</p>
-<p>   The sandbox is not in sync with the Podfile.lock. Run ‘pod install’ or update your CocoaPods installation.<br>此时，正确的做法是：</p>
-<p>1.Project Cleanup<br>2.Remove all libPods*.a in  Linked Frameworks and Libraries<br>3.Update CocoaPods using the command  pod install<br>测试：<br>添加 #import <afnetworking.h>头文件<br>从此引用第三方库如此简单，希望各位用的爽</afnetworking.h></p>
-<p>CocoaPods常用命令</p>
-<p>1、pod install<br>根据Podfile文件指定的内容，安装依赖库，如果有Podfile.lock文件而且对应的Podfile文件未被修改，则会根据Podfile.lock文件指定的版本安装。<br>每次更新了Podfile文件时，都需要重新执行该命令，以便重新安装Pods依赖库。</p>
-<p>2、pod update<br>若果Podfile中指定的依赖库版本不是写死的，当对应的依赖库有了更新，无论有没有Podfile.lock文件都会去获取Podfile文件描述的允许获取到的最新依赖库版本。</p>
-<p>3、pod search<br>命令格式为：</p>
-<p>$ pod search AFNetworking  AFNetworking为参数<br>4、查看版本</p>
-<p>pod –version<br>5、卸载 cocoapods</p>
-<p>sudo gem uninstall cocoapods<br>今天比较闲，就把CocoaPods升级到0.36.0正式版（以前写Swift的时候用的预览版）。然后就郁闷了，不管安装什么第三方都会出现类似于：<br>[!] Unable to satisfy the following requirements: - `AFNetworking (~&gt; 2.5.1)</p>
-<p> 一通的搜索后找到原因，因为GFW的缘故。解决方法：<br>pod repo remove master<br>pod repo add master <a href="https://gitcafe.com/akuandev/Specs.git" target="_blank" rel="external">https://gitcafe.com/akuandev/Specs.git</a><br>pod repo update</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/04/01/HelloWord/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
     
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/04/01/hello-world/" title="Hello World" itemprop="url">Hello World</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="李富鹏" target="_blank" itemprop="author">李富鹏</a>
-		
-  <p class="article-time">
-    <time datetime="2017-04-01T05:58:26.000Z" itemprop="datePublished"> Published 2017-04-01</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/04/01/hello-world/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
+    <time datetime="2017-04-01T05:58:26.000Z" itemprop="datePublished">2017-04-01</time>
+  </a>
+</section>
 
 
 

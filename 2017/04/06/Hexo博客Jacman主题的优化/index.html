@@ -21,7 +21,7 @@
 <meta property="og:description" content="在themes/你的主题/layout/_partial/footer.ejs中最后面添加脚本：
 12&amp;lt;script async src=&amp;quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 添加总pv计数和总uv计数在上面footer.ejs文件最后添加这">
-<meta property="og:updated_time" content="2017-04-08T09:05:23.000Z">
+<meta property="og:updated_time" content="2017-04-08T09:07:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客Jacman主题的优化">
 <meta name="twitter:description" content="在themes/你的主题/layout/_partial/footer.ejs中最后面添加脚本：
@@ -54,7 +54,7 @@
 				<h1 class="site-name"><a href="/" title="走心的开发者">走心的开发者</a></h1>
 				<h2 class="blog-motto">你有赚1亿的欲望却只有1天的耐心？</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -72,7 +72,7 @@
  					
 						<form class="search" action="http://zhannei.baidu.com/cse/search" target="_blank">
 							<label>Search</label>
-						<input name="s" type="hidden" value= null ><input type="text" name="q" size="30" placeholder="搜索"><br>
+						<input name="s" type="hidden" value= null ><input type="text" name="q" size="30" placeholder="Search"><br>
 						</form>
 					
 					</li>
@@ -104,7 +104,7 @@
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
+			<strong class="toc-title">Contents</strong>
 		
 			<ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#添加总pv计数和总uv计数"><span class="toc-number">1.</span> <span class="toc-text">添加总pv计数和总uv计数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#添加文章访问计数"><span class="toc-number">2.</span> <span class="toc-text">添加文章访问计数</span></a></li></ol>
 		
@@ -115,7 +115,7 @@
 <h6 id="添加总pv计数和总uv计数"><a href="#添加总pv计数和总uv计数" class="headerlink" title="添加总pv计数和总uv计数"></a>添加总pv计数和总uv计数</h6><p>在上面footer.ejs文件最后添加这两个计数脚本：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;</div><div class="line">      Total visits: &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;</div><div class="line">&lt;/span&gt;</div><div class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</div><div class="line">      You are Visiter No.&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;</div><div class="line">&lt;/span&gt;</div></pre></td></tr></table></figure>
 <h6 id="添加文章访问计数"><a href="#添加文章访问计数" class="headerlink" title="添加文章访问计数"></a>添加文章访问计数</h6><p>这里我添加到标题右下方，正文上面的地方。在themes/jacman/layout/_partial/post/header.ejs中<br><code>class=&quot;article-time&quot;&gt;</code> 标签里面添加：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;</div><div class="line">    总阅读&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次</div><div class="line">&lt;/span&gt;</div><div class="line">``` </div><div class="line"></div><div class="line">###### 打赏功能</div><div class="line"></div><div class="line">我们要实现的目标就是只需在 themes\jacman\_config.yml 文件中添加如下语句：</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;</div><div class="line">    总阅读&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次</div><div class="line">&lt;/span&gt;</div><div class="line">``` </div><div class="line"></div><div class="line">###### 打赏功能</div><div class="line"></div><div class="line">我们要实现的目标就是只需在`themes\jacman\_config.yml`文件中添加如下语句：</div></pre></td></tr></table></figure>
 <p>donate:<br>  enable: true<br>  text: 打赏我的人，运气都不会太差~<br>  wechat: <a href="http://7xsl28.com1.z0.glb.clouddn.com/wechatpay.png" target="_blank" rel="external">http://7xsl28.com1.z0.glb.clouddn.com/wechatpay.png</a><br>  alipay: <a href="http://7xsl28.com1.z0.glb.clouddn.com/alipay.jpg" target="_blank" rel="external">http://7xsl28.com1.z0.glb.clouddn.com/alipay.jpg</a><br>  web: true<br>```</p>
   
 	</div>
@@ -299,17 +299,17 @@
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
+  <strong class="toc-title">Contents</strong>
  
  <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#添加总pv计数和总uv计数"><span class="toc-number">1.</span> <span class="toc-text">添加总pv计数和总uv计数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#添加文章访问计数"><span class="toc-number">2.</span> <span class="toc-text">添加文章访问计数</span></a></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
@@ -320,7 +320,7 @@
   
 
   <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -342,11 +342,11 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">新浪微博</p>
+  <p class="asidetitle">Weibo</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=2367296511&verifier=ec0391a3&dpc=1"></iframe>
     <!--<iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=2367296511&verifier=ec0391a3&dpc=1"></iframe>-->
 
@@ -591,7 +591,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

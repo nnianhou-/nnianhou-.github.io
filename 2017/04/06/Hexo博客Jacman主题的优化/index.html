@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="走心的开发者">
 <meta property="og:description" content="在themes/你的主题/layout/_partial/footer.ejs中最后面添加脚本：12&amp;lt;script async src=&amp;quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 添加总pv计数和总uv计数在上面footer.ejs文件最后添加这两">
-<meta property="og:updated_time" content="2017-04-06T10:11:34.000Z">
+<meta property="og:updated_time" content="2017-04-08T07:31:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客Jacman主题的优化">
 <meta name="twitter:description" content="在themes/你的主题/layout/_partial/footer.ejs中最后面添加脚本：12&amp;lt;script async src=&amp;quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
@@ -107,9 +107,12 @@
 		
 		<p>在themes/你的主题<code>/layout/_partial/footer.ejs</code>中最后面添加脚本：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script async src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 <h6 id="添加总pv计数和总uv计数"><a href="#添加总pv计数和总uv计数" class="headerlink" title="添加总pv计数和总uv计数"></a>添加总pv计数和总uv计数</h6><p>在上面footer.ejs文件最后添加这两个计数脚本：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;</div><div class="line">      Total visits: &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;</div><div class="line">&lt;/span&gt;</div><div class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</div><div class="line">    You are Visiter No.&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;</div><div class="line">&lt;/span&gt;</div></pre></td></tr></table></figure></p>
-<h6 id="添加文章访问计数"><a href="#添加文章访问计数" class="headerlink" title="添加文章访问计数"></a>添加文章访问计数</h6><p>这里我添加到标题右下方，正文上面的地方。在<br>themes\jacman\layout_partial\post\header.ejs中，</p>
-<p>class=”article-time”&gt;<code>标签里面添加：</code> javascript<br><span id="busuanzi_container_page_pv"><br>    总阅读<span id="busuanzi_value_page_pv"></span>次<br></span></p>
-  
+<h6 id="添加文章访问计数"><a href="#添加文章访问计数" class="headerlink" title="添加文章访问计数"></a>添加文章访问计数</h6><p>这里我添加到标题右下方，正文上面的地方。在themes\jacman\layout_partial\post\header.ejs中</p>
+<p><code>class=&quot;article-time&quot;&gt;</code> 标签里面添加：</p>
+<pre><code>&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;
+    总阅读&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次
+&lt;/span&gt;
+</code></pre>  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">

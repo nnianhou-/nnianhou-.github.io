@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="走心的开发者">
 <meta property="og:description" content="在themes/你的主题/layout/_partial/footer.ejs中最后面添加脚本：12&amp;lt;script async src=&amp;quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 添加总pv计数和总uv计数在上面footer.ejs文件最后添加这两">
-<meta property="og:updated_time" content="2017-04-08T07:40:56.000Z">
+<meta property="og:updated_time" content="2017-04-08T08:36:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客Jacman主题的优化">
 <meta name="twitter:description" content="在themes/你的主题/layout/_partial/footer.ejs中最后面添加脚本：12&amp;lt;script async src=&amp;quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
@@ -51,7 +51,7 @@
 				<h1 class="site-name"><a href="/" title="走心的开发者">走心的开发者</a></h1>
 				<h2 class="blog-motto">你有赚1亿的欲望却只有1天的耐心？</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -69,7 +69,7 @@
  					
 						<form class="search" action="http://zhannei.baidu.com/cse/search" target="_blank">
 							<label>Search</label>
-						<input name="s" type="hidden" value= null ><input type="text" name="q" size="30" placeholder="Search"><br>
+						<input name="s" type="hidden" value= null ><input type="text" name="q" size="30" placeholder="搜索"><br>
 						</form>
 					
 					</li>
@@ -101,7 +101,7 @@
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
+			<strong class="toc-title">文章目录</strong>
 		
 			<ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#添加总pv计数和总uv计数"><span class="toc-number">1.</span> <span class="toc-text">添加总pv计数和总uv计数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#添加文章访问计数"><span class="toc-number">2.</span> <span class="toc-text">添加文章访问计数</span></a></li></ol>
 		
@@ -110,11 +110,98 @@
 		<p>在themes/你的主题<code>/layout/_partial/footer.ejs</code>中最后面添加脚本：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script async src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 <h6 id="添加总pv计数和总uv计数"><a href="#添加总pv计数和总uv计数" class="headerlink" title="添加总pv计数和总uv计数"></a>添加总pv计数和总uv计数</h6><p>在上面footer.ejs文件最后添加这两个计数脚本：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;</div><div class="line">      Total visits: &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;</div><div class="line">&lt;/span&gt;</div><div class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</div><div class="line">      You are Visiter No.&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;</div><div class="line">&lt;/span&gt;</div></pre></td></tr></table></figure></p>
 <h6 id="添加文章访问计数"><a href="#添加文章访问计数" class="headerlink" title="添加文章访问计数"></a>添加文章访问计数</h6><p>这里我添加到标题右下方，正文上面的地方。在themes/jacman/layout/_partial/post/header.ejs中</p>
-<p><code>class=&quot;article-time&quot;&gt;</code> 标签里面添加：</p>
-<pre><code>&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;
-    总阅读&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次
-&lt;/span&gt;
-</code></pre>  
+<p><code>class=&quot;article-time&quot;&gt;</code> 标签里面添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;</div><div class="line">    总阅读&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次</div><div class="line">&lt;/span&gt;</div><div class="line">``` </div><div class="line">###### 打赏功能</div><div class="line">我们要实现的目标就是只需在 themes\jacman\_config.yml 文件中添加如下语句：</div></pre></td></tr></table></figure></p>
+<p>donate:<br>  enable: true<br>  text: 打赏我的人，运气都不会太差~<br>  wechat: <a href="http://7xsl28.com1.z0.glb.clouddn.com/wechatpay.png" target="_blank" rel="external">http://7xsl28.com1.z0.glb.clouddn.com/wechatpay.png</a><br>  alipay: <a href="http://7xsl28.com1.z0.glb.clouddn.com/alipay.jpg" target="_blank" rel="external">http://7xsl28.com1.z0.glb.clouddn.com/alipay.jpg</a><br>  web: true<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">因为我们想要将打赏功能嵌入到每一篇博客当中，所以我们需要改动文章显示的HTML模板。 </div><div class="line">找到 `themes\jacman\layout\_partial\post\article.ejs `</div><div class="line">这就是文章的HTML模板文件，在 `&lt;div class=&quot;article-content&quot;&gt;...&lt;/div&gt; 的下面， &lt;%- partial(&apos;footer&apos;) %&gt; `的上面插入如下HTML代码：</div></pre></td></tr></table></figure></p>
+<p>&lt;% if (theme.donate) { %&gt;<br>    <!-- css --><br>    <style type="text/css"><br>        .center {<br>            text-align: center;<br>        }<br>        .hidden {<br>            display: none;<br>        }<br>        .donate_bar a.btn_donate{<br>            display: inline-block;<br>            width: 82px;<br>            height: 82px;<br>            background: url(“<a href="http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif">http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif</a>“) no-repeat;<br>            _background: url(“<a href="http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif">http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif</a>“) no-repeat;</p>
+<pre><code>        &lt;!-- http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif
+             因为本 hexo 生成的博客所用的 theme 的 a:hover 带动画效果，
+             为了在让打赏按钮显示效果正常 而 添加了以下几行 css，
+             嵌入其它博客时不一定要它们。 --&gt;
+        -webkit-transition: background 0s;
+        -moz-transition: background 0s;
+        -o-transition: background 0s;
+        -ms-transition: background 0s;
+        transition: background 0s;
+        &lt;!-- /让打赏按钮的效果显示正常 而 添加的几行 css 到此结束 --&gt;
+    }
+
+    .donate_bar a.btn_donate:hover{ background-position: 0px -82px;}
+    .donate_bar .donate_txt {
+        display: block;
+        color: #9d9d9d;
+        font: 14px/2 &quot;Microsoft Yahei&quot;;
+    }
+    .bold{ font-weight: bold; }
+&lt;/style&gt;
+&lt;!-- /css --&gt;
+
+&lt;!-- Donate Module --&gt;
+&lt;div id=&quot;donate_module&quot;&gt;
+
+&lt;!-- btn_donate &amp; tips --&gt;
+&lt;div id=&quot;donate_board&quot; class=&quot;donate_bar center&quot;&gt;
+    &lt;br&gt;
+    ------------------------------------------------------------------------------------------------------------------------------
+    &lt;br&gt;
+    &lt;a id=&quot;btn_donate&quot; class=&quot;btn_donate&quot; target=&quot;_self&quot; href=&quot;javascript:;&quot; title=&quot;Donate 打赏&quot;&gt;&lt;/a&gt;
+    &lt;span class=&quot;donate_txt&quot;&gt;
+        &lt;%= theme.donate.text %&gt;
+    &lt;/span&gt;
+
+
+&lt;/div&gt;
+&lt;!-- /btn_donate &amp; tips --&gt;
+
+&lt;!-- donate guide --&gt;
+
+&lt;div id=&quot;donate_guide&quot; class=&quot;donate_bar center hidden&quot;&gt;
+    &lt;br&gt;
+    ------------------------------------------------------------------------------------------------------------------------------
+    &lt;br&gt;
+    &lt;% if(theme.donate.web) { %&gt;
+    &lt;div width=&quot;100%&quot; align=&quot;center&quot;&gt;&lt;div name=&quot;dashmain&quot; id=&quot;dash-main-id-87895f&quot; class=&quot;dash-main-3 87895f-0.99&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;http://www.dashangcloud.com/static/ds.js&quot;&gt;&lt;/script&gt;
+    &lt;% } %&gt;
+
+    &lt;a href=&quot;&lt;%= theme.donate.wechat %&gt;&quot; title=&quot;用微信扫一扫哦~&quot; class=&quot;fancybox&quot; rel=&quot;article0&quot;&gt;
+        &lt;img src=&quot;&lt;%= theme.donate.wechat %&gt;&quot; title=&quot;微信打赏 Donate&quot; height=&quot;190px&quot; width=&quot;auto&quot;/&gt;
+    &lt;/a&gt;
+
+
+
+    &lt;a href=&quot;&lt;%= theme.donate.alipay %&gt;&quot; title=&quot;用支付宝扫一扫即可~&quot; class=&quot;fancybox&quot; rel=&quot;article0&quot;&gt;
+        &lt;img src=&quot;&lt;%= theme.donate.alipay %&gt;&quot; title=&quot;支付宝打赏 Donate&quot; height=&quot;190px&quot; width=&quot;auto&quot;/&gt;
+    &lt;/a&gt;
+
+    &lt;span class=&quot;donate_txt&quot;&gt;
+        &lt;%= theme.donate.text %&gt;
+    &lt;/span&gt;
+
+&lt;/div&gt;
+&lt;!-- /donate guide --&gt;
+
+&lt;!-- donate script --&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    document.getElementById(&apos;btn_donate&apos;).onclick = function() {
+        $(&apos;#donate_board&apos;).addClass(&apos;hidden&apos;);
+    $(&apos;#donate_guide&apos;).removeClass(&apos;hidden&apos;);
+    }
+
+    function donate_on_web(){
+        $(&apos;#donate&apos;).submit();
+    }
+
+    var original_window_onload = window.onload;
+    window.onload = function () {
+        if (original_window_onload) {
+            original_window_onload();
+        }
+        document.getElementById(&apos;donate_board_wdg&apos;).className = &apos;hidden&apos;;
+    }
+&lt;/script&gt;
+&lt;!-- /donate script --&gt;
+</code></pre><p></div><br><!-- /Donate Module --><br>   &lt;% } %&gt;<br>```</p>
+</style></p>  
 	</div>
 
 		<!--打赏功能-->
@@ -296,17 +383,17 @@
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
+  <strong class="toc-title">文章目录</strong>
  
  <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#添加总pv计数和总uv计数"><span class="toc-number">1.</span> <span class="toc-text">添加总pv计数和总uv计数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#添加文章访问计数"><span class="toc-number">2.</span> <span class="toc-text">添加文章访问计数</span></a></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
@@ -317,7 +404,7 @@
   
 
   <div class="linkslist">
-  <p class="asidetitle">Links</p>
+  <p class="asidetitle">友情链接</p>
     <ul>
         
           <li>
@@ -339,11 +426,11 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">Weibo</p>
+  <p class="asidetitle">新浪微博</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=2367296511&verifier=ec0391a3&dpc=1"></iframe>
     <!--<iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=2367296511&verifier=ec0391a3&dpc=1"></iframe>-->
 
@@ -588,7 +675,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

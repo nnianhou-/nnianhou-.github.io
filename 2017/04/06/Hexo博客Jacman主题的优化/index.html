@@ -21,7 +21,7 @@
 <meta property="og:description" content="在themes/你的主题/layout/_partial/footer.ejs中最后面添加脚本：
 12&amp;lt;script async src=&amp;quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 添加总pv计数和总uv计数在上面footer.ejs文件最后添加这">
-<meta property="og:updated_time" content="2017-04-08T09:09:17.000Z">
+<meta property="og:updated_time" content="2017-04-09T01:19:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客Jacman主题的优化">
 <meta name="twitter:description" content="在themes/你的主题/layout/_partial/footer.ejs中最后面添加脚本：
@@ -106,7 +106,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#添加总pv计数和总uv计数"><span class="toc-number">1.</span> <span class="toc-text">添加总pv计数和总uv计数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#添加文章访问计数"><span class="toc-number">2.</span> <span class="toc-text">添加文章访问计数</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#添加总pv计数和总uv计数"><span class="toc-number">1.</span> <span class="toc-text">添加总pv计数和总uv计数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#添加文章访问计数"><span class="toc-number">2.</span> <span class="toc-text">添加文章访问计数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#打赏功能"><span class="toc-number">3.</span> <span class="toc-text">打赏功能</span></a></li></ol>
 		
 		</div>
 		
@@ -115,8 +115,9 @@
 <h6 id="添加总pv计数和总uv计数"><a href="#添加总pv计数和总uv计数" class="headerlink" title="添加总pv计数和总uv计数"></a>添加总pv计数和总uv计数</h6><p>在上面footer.ejs文件最后添加这两个计数脚本：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;</div><div class="line">      Total visits: &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;</div><div class="line">&lt;/span&gt;</div><div class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</div><div class="line">      You are Visiter No.&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;</div><div class="line">&lt;/span&gt;</div></pre></td></tr></table></figure>
 <h6 id="添加文章访问计数"><a href="#添加文章访问计数" class="headerlink" title="添加文章访问计数"></a>添加文章访问计数</h6><p>这里我添加到标题右下方，正文上面的地方。在themes/jacman/layout/_partial/post/header.ejs中<br><code>class=&quot;article-time&quot;&gt;</code> 标签里面添加：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;</div><div class="line">    总阅读&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次</div><div class="line">&lt;/span&gt;</div><div class="line">``` </div><div class="line"></div><div class="line">###### 打赏功能</div><div class="line"></div><div class="line">这里我添加到标题右下方，正文上面的地方。在themes/jacman/layout/_partial/post/header.ejs中</div><div class="line">`class=&quot;article-time&quot;&gt;` 标签里面添加：</div></pre></td></tr></table></figure>
-<p>donate:<br>  enable: true<br>  text: 打赏我的人，运气都不会太差~<br>  wechat: <a href="http://7xsl28.com1.z0.glb.clouddn.com/wechatpay.png" target="_blank" rel="external">http://7xsl28.com1.z0.glb.clouddn.com/wechatpay.png</a><br>  alipay: <a href="http://7xsl28.com1.z0.glb.clouddn.com/alipay.jpg" target="_blank" rel="external">http://7xsl28.com1.z0.glb.clouddn.com/alipay.jpg</a><br>  web: true<br>```</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_page_pv"</span>&gt;</span></div><div class="line">    总阅读<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_page_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次</div><div class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure>
+<h6 id="打赏功能"><a href="#打赏功能" class="headerlink" title="打赏功能"></a>打赏功能</h6><p>这里我添加到标题右下方，正文上面的地方。在themes/jacman/layout/_partial/post/header.ejs中<br><code>class=&quot;article-time&quot;&gt;</code> 标签里面添加：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">donate:</div><div class="line">  enable: true</div><div class="line">  text: 打赏我的人，运气都不会太差~</div><div class="line">  wechat: http://7xsl28.com1.z0.glb.clouddn.com/wechatpay.png</div><div class="line">  alipay: http://7xsl28.com1.z0.glb.clouddn.com/alipay.jpg</div><div class="line">  web: true</div></pre></td></tr></table></figure>
   
 	</div>
 
@@ -304,7 +305,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#添加总pv计数和总uv计数"><span class="toc-number">1.</span> <span class="toc-text">添加总pv计数和总uv计数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#添加文章访问计数"><span class="toc-number">2.</span> <span class="toc-text">添加文章访问计数</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#添加总pv计数和总uv计数"><span class="toc-number">1.</span> <span class="toc-text">添加总pv计数和总uv计数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#添加文章访问计数"><span class="toc-number">2.</span> <span class="toc-text">添加文章访问计数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#打赏功能"><span class="toc-number">3.</span> <span class="toc-text">打赏功能</span></a></li></ol>
  
   </div>
 

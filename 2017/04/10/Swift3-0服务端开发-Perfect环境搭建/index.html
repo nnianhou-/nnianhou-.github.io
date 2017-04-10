@@ -11,19 +11,16 @@
     
 
     
-    <meta name="description" content="Perfect是一组完整、强大的工具箱、软件框架体系和Web应用服务器，可以在Linux、iOS和macOS (OS X)上使用。该软件体系为Swift工程师量身定制了一整套用于开发轻量、易维护、规模可扩展的Web应用及其它REST服务的解决方案，这样Swift工程师就可以实现同时在服务器和客户端上采用同一种语言开发软件项目。
-Perfect内建整套工具集，因为无论是客户端还是服务器都能够在此基础">
+    <meta name="description" content="Perfect框架简介Perfect框架是目前比较完善的Swift服务端框架之一Perfect框架也是开源的，在Github上可以找到相关的源代码,官网上有相关的Demo以及使用文档Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网地址：https://www.perfect.org/官方开发文档地址：https:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Swift3.0服务端开发-Perfect环境搭建">
 <meta property="og:url" content="http://yoursite.com/2017/04/10/Swift3-0服务端开发-Perfect环境搭建/index.html">
 <meta property="og:site_name" content="走心的开发者">
-<meta property="og:description" content="Perfect是一组完整、强大的工具箱、软件框架体系和Web应用服务器，可以在Linux、iOS和macOS (OS X)上使用。该软件体系为Swift工程师量身定制了一整套用于开发轻量、易维护、规模可扩展的Web应用及其它REST服务的解决方案，这样Swift工程师就可以实现同时在服务器和客户端上采用同一种语言开发软件项目。
-Perfect内建整套工具集，因为无论是客户端还是服务器都能够在此基础">
-<meta property="og:updated_time" content="2017-04-10T07:12:53.000Z">
+<meta property="og:description" content="Perfect框架简介Perfect框架是目前比较完善的Swift服务端框架之一Perfect框架也是开源的，在Github上可以找到相关的源代码,官网上有相关的Demo以及使用文档Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网地址：https://www.perfect.org/官方开发文档地址：https:">
+<meta property="og:updated_time" content="2017-04-10T07:55:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift3.0服务端开发-Perfect环境搭建">
-<meta name="twitter:description" content="Perfect是一组完整、强大的工具箱、软件框架体系和Web应用服务器，可以在Linux、iOS和macOS (OS X)上使用。该软件体系为Swift工程师量身定制了一整套用于开发轻量、易维护、规模可扩展的Web应用及其它REST服务的解决方案，这样Swift工程师就可以实现同时在服务器和客户端上采用同一种语言开发软件项目。
-Perfect内建整套工具集，因为无论是客户端还是服务器都能够在此基础">
+<meta name="twitter:description" content="Perfect框架简介Perfect框架是目前比较完善的Swift服务端框架之一Perfect框架也是开源的，在Github上可以找到相关的源代码,官网上有相关的Demo以及使用文档Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网地址：https://www.perfect.org/官方开发文档地址：https:">
 
     
     <link rel="alternative" href="/atom.xml" title="走心的开发者" type="application/atom+xml">
@@ -103,14 +100,13 @@ Perfect内建整套工具集，因为无论是客户端还是服务器都能够�
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#Perfect框架简介"><span class="toc-number">1.</span> <span class="toc-text">Perfect框架简介</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Perfect框架的获取和编译"><span class="toc-number">2.</span> <span class="toc-text">Perfect框架的获取和编译</span></a></li></ol>
 		
 		</div>
 		
-		<p>Perfect是一组完整、强大的工具箱、软件框架体系和Web应用服务器，可以在Linux、iOS和macOS (OS X)上使用。该软件体系为Swift工程师量身定制了一整套用于开发轻量、易维护、规模可扩展的Web应用及其它REST服务的解决方案，这样Swift工程师就可以实现同时在服务器和客户端上采用同一种语言开发软件项目。</p>
-<p>Perfect内建整套工具集，因为无论是客户端还是服务器都能够在此基础之上用同一种计算机语言Swift进行程序开发，因此能够为软件工程师大幅提高工作效率。在全球目前众多的服务器端框架体系和工具箱产品之中，Perfect目前已经成为许多iTunes在线应用程序的可靠后台应用。</p>
-<p>无论您是资深程序员还是入门级的软件工程师，本文都能够帮助您快速启动Perfect实现服务器项目开发运行。<br><a href="https://github.com/PerfectlySoft/Perfect" target="_blank" rel="external">Perfect：Swift 语言服务器端软件框架</a></p>
-  
+		<h6 id="Perfect框架简介"><a href="#Perfect框架简介" class="headerlink" title="Perfect框架简介"></a>Perfect框架简介</h6><p>Perfect框架是目前比较完善的Swift服务端框架之一<br>Perfect框架也是开源的，在Github上可以找到相关的源代码,官网上有相关的Demo以及使用文档<br>Perfect-Github地址：<a href="https://github.com/PerfectlySoft/Perfect" target="_blank" rel="external">https://github.com/PerfectlySoft/Perfect</a><br>Perfect的官网地址：<a href="https://www.perfect.org/" target="_blank" rel="external">https://www.perfect.org/</a><br>官方开发文档地址：<a href="https://www.perfect.org/docs/index_zh_CN.html" target="_blank" rel="external">https://www.perfect.org/docs/index_zh_CN.html</a><br>Swift目前最新的版本是3.0,Swift语言支持Linux，iOS和Mac OS<br>我们可以使用Perfect开发Web应用，API等服务端应用</p>
+<p>我们使用<br>Mac OS<br>swift3.0<br>Xcode8.3</p>
+<h6 id="Perfect框架的获取和编译"><a href="#Perfect框架的获取和编译" class="headerlink" title="Perfect框架的获取和编译"></a>Perfect框架的获取和编译</h6>  
 	</div>
 
 		<!--打赏功能-->
@@ -297,7 +293,7 @@ Perfect内建整套工具集，因为无论是客户端还是服务器都能够�
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#Perfect框架简介"><span class="toc-number">1.</span> <span class="toc-text">Perfect框架简介</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Perfect框架的获取和编译"><span class="toc-number">2.</span> <span class="toc-text">Perfect框架的获取和编译</span></a></li></ol>
  
   </div>
 

@@ -19,7 +19,7 @@ Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网�
 <meta property="og:site_name" content="走心的开发者">
 <meta property="og:description" content="Perfect框架简介Perfect框架是目前比较完善的Swift服务端框架之一Perfect框架也是开源的，在Github上可以找到相关的源代码,官网上有相关的Demo以及使用文档
 Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网地址：https://www.perfect.org/官方开发文档地址：https">
-<meta property="og:updated_time" content="2017-04-13T03:18:59.000Z">
+<meta property="og:updated_time" content="2017-04-13T03:21:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift3.0服务端开发-让Perfect跑起来">
 <meta name="twitter:description" content="Perfect框架简介Perfect框架是目前比较完善的Swift服务端框架之一Perfect框架也是开源的，在Github上可以找到相关的源代码,官网上有相关的Demo以及使用文档
@@ -51,7 +51,7 @@ Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网�
 				<h1 class="site-name"><a href="/" title="走心的开发者">走心的开发者</a></h1>
 				<h2 class="blog-motto">你有赚1亿的欲望却只有1天的耐心？</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -69,7 +69,7 @@ Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网�
  					
 						<form class="search" action="http://zhannei.baidu.com/cse/search" target="_blank">
 							<label>Search</label>
-						<input name="s" type="hidden" value= null ><input type="text" name="q" size="30" placeholder="Search"><br>
+						<input name="s" type="hidden" value= null ><input type="text" name="q" size="30" placeholder="搜索"><br>
 						</form>
 					
 					</li>
@@ -101,7 +101,7 @@ Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网�
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
+			<strong class="toc-title">文章目录</strong>
 		
 			<ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#Perfect框架简介"><span class="toc-number">1.</span> <span class="toc-text">Perfect框架简介</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#获取Perfect框架的模板"><span class="toc-number">2.</span> <span class="toc-text">获取Perfect框架的模板</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#编译模板"><span class="toc-number">3.</span> <span class="toc-text">编译模板</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#生成Xcode项目"><span class="toc-number">4.</span> <span class="toc-text">生成Xcode项目</span></a></li></ol>
 		
@@ -116,7 +116,7 @@ Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网�
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/PerfectlySoft/PerfectTemplate</div><div class="line">cd PerfectTemplate</div><div class="line">ls</div></pre></td></tr></table></figure>
 <p>这里我们可以修改成我们自己项目的文件夹名称 比如 <code>Ranking</code>，然后cd到Ranking根目录</p>
 <h6 id="编译模板"><a href="#编译模板" class="headerlink" title="编译模板"></a>编译模板</h6><p>在<code>Ranking</code>目录中有一个<code>Package.swift</code>文件，其中可以指定工程的名称以及工程所依赖的包。首先我们打开Package.swift，指定我们工程的文件名。具体如下所示。</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> package = <span class="type">Package</span>(</div><div class="line">	name: <span class="string">"Ranking_Service"</span>, <span class="comment">// Perfect的工程名 可自行修改</span></div><div class="line">	targets: [],</div><div class="line">	dependencies: [</div><div class="line">		.<span class="type">Package</span>(url: <span class="string">"https://github.com/PerfectlySoft/Perfect-HTTPServer.git"</span>, majorVersion: <span class="number">2</span>),</div><div class="line">		<span class="comment">//MySql数据库依赖包</span></div><div class="line">        .<span class="type">Package</span>(url:<span class="string">"https://github.com/PerfectlySoft/Perfect-MySQL.git"</span>, majorVersion: <span class="number">2</span>, minor: <span class="number">0</span>)</div><div class="line">    ]</div><div class="line">)</div></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> package = <span class="type">Package</span>(</div><div class="line">    name: <span class="string">"Ranking_Service"</span>, <span class="comment">// Perfect的工程名 可自行修改</span></div><div class="line">	targets: [],</div><div class="line">	dependencies: [</div><div class="line">		.<span class="type">Package</span>(url: <span class="string">"https://github.com/PerfectlySoft/Perfect-HTTPServer.git"</span>, majorVersion: <span class="number">2</span>),</div><div class="line">		<span class="comment">//MySql数据库依赖包</span></div><div class="line">        .<span class="type">Package</span>(url:<span class="string">"https://github.com/PerfectlySoft/Perfect-MySQL.git"</span>, majorVersion: <span class="number">2</span>, minor: <span class="number">0</span>)</div><div class="line">    ]</div><div class="line">)</div></pre></td></tr></table></figure>
 <p>修改工程后，我们使用命令来编译我们的模板工程，首次编译时需要从gitHub上下载相关的依赖包，首次编译的过程会比较漫长，编译命令如下：</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">swift build <span class="comment">// 编译</span></div><div class="line">.build/debug/<span class="type">Ranking_Service</span> <span class="comment">// 执行</span></div></pre></td></tr></table></figure>
 <p>执行完成后，你的Perfect服务端的服务就启动了 ,如下所示</p>
@@ -309,17 +309,17 @@ Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网�
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
+  <strong class="toc-title">文章目录</strong>
  
  <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#Perfect框架简介"><span class="toc-number">1.</span> <span class="toc-text">Perfect框架简介</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#获取Perfect框架的模板"><span class="toc-number">2.</span> <span class="toc-text">获取Perfect框架的模板</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#编译模板"><span class="toc-number">3.</span> <span class="toc-text">编译模板</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#生成Xcode项目"><span class="toc-number">4.</span> <span class="toc-text">生成Xcode项目</span></a></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
@@ -330,7 +330,7 @@ Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网�
   
 
   <div class="linkslist">
-  <p class="asidetitle">Links</p>
+  <p class="asidetitle">友情链接</p>
     <ul>
         
           <li>
@@ -364,11 +364,11 @@ Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网�
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">Weibo</p>
+  <p class="asidetitle">新浪微博</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=2367296511&verifier=ec0391a3&dpc=1"></iframe>
     <!--<iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=2367296511&verifier=ec0391a3&dpc=1"></iframe>-->
 
@@ -613,7 +613,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

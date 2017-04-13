@@ -11,13 +11,19 @@
     
 
     
-    <meta property="og:type" content="article">
+    <meta name="description" content="我们已经让Perfect跑起来了，那我们来尝试下爬取聚合指数数据我们新建一个Index.swift文件，代码如下
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Swift3.0服务端开发-爬虫">
 <meta property="og:url" content="http://yoursite.com/2017/04/13/Swift3-0服务端开发-爬虫/index.html">
 <meta property="og:site_name" content="走心的开发者">
-<meta property="og:updated_time" content="2017-04-13T06:15:27.000Z">
+<meta property="og:description" content="我们已经让Perfect跑起来了，那我们来尝试下爬取聚合指数数据我们新建一个Index.swift文件，代码如下
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576">
+<meta property="og:updated_time" content="2017-04-13T07:04:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift3.0服务端开发-爬虫">
+<meta name="twitter:description" content="我们已经让Perfect跑起来了，那我们来尝试下爬取聚合指数数据我们新建一个Index.swift文件，代码如下
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576">
 
     
     <link rel="alternative" href="/atom.xml" title="走心的开发者" type="application/atom+xml">
@@ -45,7 +51,7 @@
 				<h1 class="site-name"><a href="/" title="走心的开发者">走心的开发者</a></h1>
 				<h2 class="blog-motto">你有赚1亿的欲望却只有1天的耐心？</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -63,7 +69,7 @@
  					
 						<form class="search" action="http://zhannei.baidu.com/cse/search" target="_blank">
 							<label>Search</label>
-						<input name="s" type="hidden" value= null ><input type="text" name="q" size="30" placeholder="Search"><br>
+						<input name="s" type="hidden" value= null ><input type="text" name="q" size="30" placeholder="搜索"><br>
 						</form>
 					
 					</li>
@@ -95,13 +101,15 @@
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
+			<strong class="toc-title">文章目录</strong>
 		
 			
 		
 		</div>
 		
-		  
+		<p>我们已经让Perfect跑起来了，那我们来尝试下爬取<a href="http://zhishuweixin.com/" target="_blank" rel="external">聚合指数</a>数据<br>我们新建一个Index.swift文件，代码如下</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Foundation</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Index</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">//传入的主url</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">var</span> url:<span class="type">String</span></div><div class="line">    <span class="comment">//输出结果</span></div><div class="line">    <span class="keyword">internal</span> <span class="keyword">var</span> results = <span class="string">""</span></div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">// 初始化 传入一个URL</span></div><div class="line">    <span class="keyword">init</span>(url:<span class="type">String</span>)&#123;</div><div class="line">        <span class="keyword">self</span>.url = url</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">// 开始爬取数据</span></div><div class="line">    <span class="keyword">internal</span> <span class="function"><span class="keyword">func</span> <span class="title">start</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">do</span>&#123;</div><div class="line">            <span class="keyword">try</span> handleData(urlString: url)</div><div class="line">        &#125;<span class="keyword">catch</span>&#123;</div><div class="line">            <span class="built_in">debugPrint</span>(error)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">handleData</span><span class="params">(urlString:String)</span></span> <span class="keyword">throws</span> &#123;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> <span class="keyword">let</span> url = <span class="type">URL</span>(string:urlString) &#123;</div><div class="line"></div><div class="line">            <span class="built_in">debugPrint</span>(<span class="string">"开始获取信息"</span>)</div><div class="line"></div><div class="line">            <span class="type">DispatchQueue</span>.global().sync&#123;</div><div class="line">                    <span class="keyword">do</span>&#123;</div><div class="line">                        <span class="comment">//通过创建Scanner</span></div><div class="line">                        <span class="keyword">let</span> scanner = <span class="type">Scanner</span>(string: <span class="keyword">try</span> <span class="type">String</span>(contentsOf:url))</div><div class="line"></div><div class="line">                        <span class="keyword">var</span> (head,foot) = (<span class="string">"&lt;div class=\"rank-wrapper row\"&gt;"</span>,<span class="string">"&lt;div class=\"footer text-center\"&gt;"</span>)</div><div class="line">                        <span class="keyword">let</span> content = <span class="keyword">self</span>.scanWith(head:head,foot:foot,scanner:scanner)</div><div class="line"></div><div class="line">                        <span class="keyword">var</span> contents  = content.components(separatedBy:<span class="string">"&lt;div class=\"col-xs-12 col-sm-6 col-md-4\"&gt;"</span>)</div><div class="line">                        contents.removeFirst()</div><div class="line"></div><div class="line">                        <span class="keyword">var</span> data = <span class="string">""</span></div><div class="line">                        <span class="keyword">for</span> (<span class="number">_</span>, item) <span class="keyword">in</span> contents.enumerated() &#123;</div><div class="line">                             (head,foot) = (<span class="string">"&lt;div class=\"rank-item text-center\"&gt;"</span>,<span class="string">"&lt;/a&gt;"</span>)</div><div class="line">                            <span class="keyword">let</span> itemString = <span class="keyword">self</span>.scanWith(head: head, foot: foot, string: item)</div><div class="line"></div><div class="line">                            <span class="keyword">let</span> href = <span class="keyword">self</span>.scanWith(head: <span class="string">"&lt;a href="</span>, foot: <span class="string">" class=\"view-wrapper data-view\"&gt;"</span>, string: itemString).replacingOccurrences(of: <span class="string">"\""</span>, with: <span class="string">""</span>)</div><div class="line">                            <span class="keyword">let</span> crown = <span class="keyword">self</span>.scanWith(head: <span class="string">"src="</span>, foot: <span class="string">"/&gt;"</span>, string: itemString).replacingOccurrences(of: <span class="string">"\""</span>, with: <span class="string">""</span>)</div><div class="line">                            <span class="keyword">let</span> rank_word = <span class="keyword">self</span>.scanWith(head: <span class="string">"&lt;p class=\"rank-word\"&gt;"</span>, foot: <span class="string">"&lt;/p&gt;"</span>, string: itemString)</div><div class="line">                            <span class="keyword">let</span> rank_tag = <span class="keyword">self</span>.scanWith(head: <span class="string">"&lt;span class=\"rank-tag\"&gt;"</span>, foot: <span class="string">"&lt;/span&gt;"</span>, string: itemString)</div><div class="line"></div><div class="line">                            data += <span class="string">"&#123;\"crown\":\"<span class="subst">\(urlString)</span><span class="subst">\(crown)</span>\",\"rank_word\":\"<span class="subst">\(rank_word)</span>\",\"rank_tag\":\"<span class="subst">\(rank_tag)</span>\",\"href\":\"<span class="subst">\(href)</span>\"&#125;,"</span></div><div class="line"></div><div class="line">                        &#125;</div><div class="line"></div><div class="line">                        results += <span class="string">"\"code\":<span class="subst">\(<span class="number">200</span>)</span>,\"data\":[<span class="subst">\(data)</span>]"</span></div><div class="line"></div><div class="line">                    &#125;<span class="keyword">catch</span>&#123;</div><div class="line">                        <span class="built_in">debugPrint</span>(error)</div><div class="line">                    &#125;</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">            <span class="built_in">debugPrint</span>(<span class="string">"获取信息结束"</span>)</div><div class="line"></div><div class="line">            results = results.replace(of: <span class="string">","</span>, with: <span class="string">""</span>)</div><div class="line">            results = results.characters.<span class="built_in">count</span> &gt; <span class="number">0</span> ? <span class="string">"&#123;<span class="subst">\(results)</span>&#125;"</span> : <span class="string">""</span></div><div class="line"></div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">throw</span> crawlerError(msg:<span class="string">"查询URL初始化失败"</span>)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">// html截取</span></div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">scanWith</span><span class="params">(head:String,foot:String,scanner:Scanner)</span></span>-&gt;<span class="type">String</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">var</span> str:<span class="type">NSString</span>?</div><div class="line"></div><div class="line">        scanner.scanUpTo(head, into: <span class="literal">nil</span>)</div><div class="line">        scanner.scanUpTo(foot, into: &amp;str)</div><div class="line"></div><div class="line">        <span class="keyword">return</span> str == <span class="literal">nil</span> ? <span class="string">""</span> : str!.replacingOccurrences(of: head, with: <span class="string">""</span>)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 字符串截取</span></div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">scanWith</span><span class="params">(head:String,foot:String,string:String)</span></span>-&gt;<span class="type">String</span></div><div class="line">    &#123;</div><div class="line"></div><div class="line">        <span class="keyword">let</span> range = string.range(of: head)</div><div class="line">        <span class="keyword">let</span> startIndex = range!.upperBound</div><div class="line"></div><div class="line">        <span class="keyword">let</span> range1 = <span class="type">Range</span>(uncheckedBounds: (lower: string.startIndex, upper: string.endIndex))</div><div class="line">        <span class="keyword">let</span> endRange = string.range(of: foot, options: .backwards, range: range1, locale: <span class="type">Locale</span>(identifier: <span class="string">"&lt;"</span>))</div><div class="line">        <span class="keyword">let</span> endIndex = endRange!.lowerBound</div><div class="line"></div><div class="line">        <span class="keyword">let</span> searchRange = <span class="type">Range</span>(uncheckedBounds: (startIndex, endIndex))</div><div class="line"></div><div class="line">        <span class="keyword">let</span> endString = string.substring(with: searchRange)</div><div class="line">        <span class="keyword">return</span> endString</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//自定义一个错误处理</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">struct</span> <span class="title">crawlerError</span>:<span class="title">Error</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">var</span> message:<span class="type">String</span></div><div class="line"></div><div class="line">    <span class="keyword">init</span>(msg:<span class="type">String</span>)</div><div class="line">    &#123;</div><div class="line">        message = msg</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">extension</span> <span class="title">String</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">//去掉字符串(空格之类的)</span></div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">trim</span><span class="params">(string:String)</span></span> -&gt; <span class="type">String</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">self</span> == <span class="string">""</span> ? <span class="string">""</span> : <span class="keyword">self</span>.trimmingCharacters(<span class="keyword">in</span>: <span class="type">CharacterSet</span>(charactersIn: string))</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//替换从末尾出现的第一个指定字符串</span></div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">replace</span><span class="params">(of pre:String,with next:String)</span></span>-&gt;<span class="type">String</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> replacingOccurrences(of: pre, with: next, options: <span class="type">String</span>.<span class="type">CompareOptions</span>.backwards, range: index(endIndex, offsetBy: -<span class="number">2</span>)..&lt;endIndex)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+  
 	</div>
 
 		<!--打赏功能-->
@@ -251,7 +259,7 @@
  
 
 <div class="next">
-<a href="/2017/04/10/Swift3-0服务端开发-Perfect环境搭建/"  title="Swift3.0服务端开发-让Perfect跑起来">
+<a href="/2017/04/10/Swift3.0服务端开发-让Perfect跑起来/"  title="Swift3.0服务端开发-让Perfect跑起来">
  <strong>下一篇：</strong><br/> 
  <span>Swift3.0服务端开发-让Perfect跑起来
 </span>
@@ -283,17 +291,17 @@
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
+  <strong class="toc-title">文章目录</strong>
  
  
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
@@ -304,7 +312,7 @@
   
 
   <div class="linkslist">
-  <p class="asidetitle">Links</p>
+  <p class="asidetitle">友情链接</p>
     <ul>
         
           <li>
@@ -338,11 +346,11 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">Weibo</p>
+  <p class="asidetitle">新浪微博</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=2367296511&verifier=ec0391a3&dpc=1"></iframe>
     <!--<iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=2367296511&verifier=ec0391a3&dpc=1"></iframe>-->
 
@@ -599,7 +607,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

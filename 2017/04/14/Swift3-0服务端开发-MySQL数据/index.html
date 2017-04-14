@@ -4,26 +4,32 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Swift3.0服务端开发-让Perfect跑起来 | 走心的开发者</title>
+    <title>Swift3.0服务端开发-MySQL数据 | 走心的开发者</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="swift">
     
 
     
-    <meta name="description" content="Perfect框架简介Perfect框架是目前比较完善的Swift服务端框架之一Perfect框架也是开源的，在Github上可以找到相关的源代码,官网上有相关的Demo以及使用文档
-Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网地址：https://www.perfect.org/官方开发文档地址：https">
+    <meta name="description" content="安装MySQL我们去官网)去下载.dmg文件自己安装，这样可以在系统偏好设置中找到MySQL直接进行开关。完安装完成后，开启数据库会给你一个默认的密码，记下密码作为以后登录的凭据 
+1[Note] A temporary password is generated for root@localhost: ;MogVy&amp;gt;jt5y&amp;gt;
+修改mysql密码苹果-&amp;gt;系统偏好设置-&amp;gt;最">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Swift3.0服务端开发-让Perfect跑起来">
-<meta property="og:url" content="http://yoursite.com/2017/04/10/Swift3.0服务端开发-让Perfect跑起来/index.html">
+<meta property="og:title" content="Swift3.0服务端开发-MySQL数据">
+<meta property="og:url" content="http://yoursite.com/2017/04/14/Swift3-0服务端开发-MySQL数据/index.html">
 <meta property="og:site_name" content="走心的开发者">
-<meta property="og:description" content="Perfect框架简介Perfect框架是目前比较完善的Swift服务端框架之一Perfect框架也是开源的，在Github上可以找到相关的源代码,官网上有相关的Demo以及使用文档
-Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网地址：https://www.perfect.org/官方开发文档地址：https">
-<meta property="og:updated_time" content="2017-04-13T03:21:06.000Z">
+<meta property="og:description" content="安装MySQL我们去官网)去下载.dmg文件自己安装，这样可以在系统偏好设置中找到MySQL直接进行开关。完安装完成后，开启数据库会给你一个默认的密码，记下密码作为以后登录的凭据 
+1[Note] A temporary password is generated for root@localhost: ;MogVy&amp;gt;jt5y&amp;gt;
+修改mysql密码苹果-&amp;gt;系统偏好设置-&amp;gt;最">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-d19a3446d14cafb5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-aaa454e0c6548765.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-04-14T08:59:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Swift3.0服务端开发-让Perfect跑起来">
-<meta name="twitter:description" content="Perfect框架简介Perfect框架是目前比较完善的Swift服务端框架之一Perfect框架也是开源的，在Github上可以找到相关的源代码,官网上有相关的Demo以及使用文档
-Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网地址：https://www.perfect.org/官方开发文档地址：https">
+<meta name="twitter:title" content="Swift3.0服务端开发-MySQL数据">
+<meta name="twitter:description" content="安装MySQL我们去官网)去下载.dmg文件自己安装，这样可以在系统偏好设置中找到MySQL直接进行开关。完安装完成后，开启数据库会给你一个默认的密码，记下密码作为以后登录的凭据 
+1[Note] A temporary password is generated for root@localhost: ;MogVy&amp;gt;jt5y&amp;gt;
+修改mysql密码苹果-&amp;gt;系统偏好设置-&amp;gt;最">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/119178-d19a3446d14cafb5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
     
     <link rel="alternative" href="/atom.xml" title="走心的开发者" type="application/atom+xml">
@@ -84,14 +90,14 @@ Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网�
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/10/Swift3.0服务端开发-让Perfect跑起来/" title="Swift3.0服务端开发-让Perfect跑起来" itemprop="url">Swift3.0服务端开发-让Perfect跑起来</a>
+      <a href="/2017/04/14/Swift3-0服务端开发-MySQL数据/" title="Swift3.0服务端开发-MySQL数据" itemprop="url">Swift3.0服务端开发-MySQL数据</a>
   </h1>
   <!--<p class="article-author">By-->
        <!---->
 		<!--<a href="/about" title="swift" target="_blank" itemprop="author">swift</a>-->
 		<!---->
   <p class="article-time">
-    <time datetime="2017-04-10T07:10:38.000Z" itemprop="datePublished">  2017-04-10</time>
+    <time datetime="2017-04-14T06:15:21.000Z" itemprop="datePublished">  2017-04-14</time>
 
       <span id="busuanzi_container_page_pv">
           总阅读<span id="busuanzi_value_page_pv"></span>次
@@ -103,30 +109,24 @@ Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网�
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目錄</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#Perfect框架简介"><span class="toc-number">1.</span> <span class="toc-text">Perfect框架简介</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#获取Perfect框架的模板"><span class="toc-number">2.</span> <span class="toc-text">获取Perfect框架的模板</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#编译模板"><span class="toc-number">3.</span> <span class="toc-text">编译模板</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#生成Xcode项目"><span class="toc-number">4.</span> <span class="toc-text">生成Xcode项目</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#安装MySQL"><span class="toc-number">1.</span> <span class="toc-text">安装MySQL</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Perfect添加MySQL库的依赖"><span class="toc-number">2.</span> <span class="toc-text">Perfect添加MySQL库的依赖</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#访问MySQL"><span class="toc-number">3.</span> <span class="toc-text">访问MySQL</span></a></li></ol>
 		
 		</div>
 		
-		<h6 id="Perfect框架简介"><a href="#Perfect框架简介" class="headerlink" title="Perfect框架简介"></a>Perfect框架简介</h6><p>Perfect框架是目前比较完善的Swift服务端框架之一<br>Perfect框架也是开源的，在Github上可以找到相关的源代码,官网上有相关的Demo以及使用文档</p>
-<p>Perfect-Github地址：<a href="https://github.com/PerfectlySoft/Perfect" target="_blank" rel="external">https://github.com/PerfectlySoft/Perfect</a><br>Perfect的官网地址：<a href="https://www.perfect.org/" target="_blank" rel="external">https://www.perfect.org/</a><br>官方开发文档地址：<a href="https://www.perfect.org/docs/index_zh_CN.html" target="_blank" rel="external">https://www.perfect.org/docs/index_zh_CN.html</a></p>
-<p>Swift目前最新的版本是3.0,Swift语言支持Linux，iOS和Mac OS<br>我们可以使用Perfect开发Web应用，API等服务端应用</p>
-<p>我们使用的系统环境 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Mac OS swift3.0 Xcode8.3</div></pre></td></tr></table></figure>
-<h6 id="获取Perfect框架的模板"><a href="#获取Perfect框架的模板" class="headerlink" title="获取Perfect框架的模板"></a>获取Perfect框架的模板</h6><p>我们从Github上Clone一份Perfect框架的模板<br>PerfectTemplate: <a href="https://github.com/PerfectlySoft/PerfectTemplate" target="_blank" rel="external">https://github.com/PerfectlySoft/PerfectTemplate</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/PerfectlySoft/PerfectTemplate</div><div class="line">cd PerfectTemplate</div><div class="line">ls</div></pre></td></tr></table></figure>
-<p>这里我们可以修改成我们自己项目的文件夹名称 比如 <code>Ranking</code>，然后cd到Ranking根目录</p>
-<h6 id="编译模板"><a href="#编译模板" class="headerlink" title="编译模板"></a>编译模板</h6><p>在<code>Ranking</code>目录中有一个<code>Package.swift</code>文件，其中可以指定工程的名称以及工程所依赖的包。首先我们打开Package.swift，指定我们工程的文件名。具体如下所示。</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> package = <span class="type">Package</span>(</div><div class="line">    name: <span class="string">"Ranking_Service"</span>, <span class="comment">// Perfect的工程名 可自行修改</span></div><div class="line">	targets: [],</div><div class="line">	dependencies: [</div><div class="line">		.<span class="type">Package</span>(url: <span class="string">"https://github.com/PerfectlySoft/Perfect-HTTPServer.git"</span>, majorVersion: <span class="number">2</span>),</div><div class="line">		<span class="comment">//MySql数据库依赖包</span></div><div class="line">        .<span class="type">Package</span>(url:<span class="string">"https://github.com/PerfectlySoft/Perfect-MySQL.git"</span>, majorVersion: <span class="number">2</span>, minor: <span class="number">0</span>)</div><div class="line">    ]</div><div class="line">)</div></pre></td></tr></table></figure>
-<p>修改工程后，我们使用命令来编译我们的模板工程，首次编译时需要从gitHub上下载相关的依赖包，首次编译的过程会比较漫长，编译命令如下：</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">swift build <span class="comment">// 编译</span></div><div class="line">.build/debug/<span class="type">Ranking_Service</span> <span class="comment">// 执行</span></div></pre></td></tr></table></figure>
-<p>执行完成后，你的Perfect服务端的服务就启动了 ,如下所示</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[<span class="type">INFO</span>] <span class="type">Starting</span> <span class="type">HTTP</span> server on <span class="number">0.0</span>.<span class="number">0.0</span>:<span class="number">8181</span></div></pre></td></tr></table></figure>
-<p>执行完毕后，我们就可以通过浏览器访问我们的Perfect服务器了。默认端口是<code>8181</code>，所以我们访问的本机地址是<code>localhost:8181</code>。地址会返回Hello,world！就成功了</p>
-<p>我们可以在<code>Source</code>文件夹下的<code>main.swift</code>文件中对我们的服务进行相关的配置，我们可以改一下端口和返回的内容在重新编译就可以看到新的信息了</p>
-<h6 id="生成Xcode项目"><a href="#生成Xcode项目" class="headerlink" title="生成Xcode项目"></a>生成Xcode项目</h6><p>我们要生成一个Xcode项目，命令如下</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">swift package generate-xcodeproj</div></pre></td></tr></table></figure>
-<p>你就可以打开上面生成的xcodeproj文件了，可以通过Xcode来编译和运行我们的Perfect项目，运行完毕后，我们的服务就启动了，就可以在浏览器中进行访问了，如下所示：</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[<span class="type">INFO</span>] <span class="type">Starting</span> <span class="type">HTTP</span> server on <span class="number">0.0</span>.<span class="number">0.0</span>:<span class="number">8181</span></div></pre></td></tr></table></figure>
+		<h6 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h6><p>我们去<a href="[https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/">官网</a>)去下载.dmg文件自己安装，这样可以在系统偏好设置中找到MySQL直接进行开关。<br>完安装完成后，开启数据库会给你一个默认的密码，记下密码作为以后登录的凭据 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[Note] A temporary password is generated for root@localhost: ;MogVy&gt;jt5y&gt;</div></pre></td></tr></table></figure>
+<p>修改mysql密码<br>苹果-&gt;系统偏好设置-&gt;最下边点mysql 在弹出页面中 关闭mysql服务（点击<code>stop mysql server</code>）</p>
+<p>进入终端输入：<code>cd /usr/local/mysql/bin/</code><br>回车后 登录管理员权限 <code>sudo su</code><br>回车后输入以下命令来禁止mysql验证功能 <code>./mysqld_safe --skip-grant-tables &amp;</code><br>回车后mysql会自动重启（偏好设置中mysql的状态会变成running）</p>
+<p>输入命令 <code>./mysql</code><br>回车后，输入命令 <code>FLUSH PRIVILEGES</code><br>回车后，输入命令 <code>SET PASSWORD FOR &#39;root&#39;@&#39;localhost&#39; = PASSWORD(&#39;你的新密码&#39;)</code><br>至此，密码修改完成，可以成功登陆</p>
+<p>我们打开Navicat添加一个数据库连接<br><img src="http://upload-images.jianshu.io/upload_images/119178-d19a3446d14cafb5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="77AA30F1-566B-4629-B44E-513FFE696ADB.png"><br>新建一张User的表，有Name和Id两个Columns。<br><img src="http://upload-images.jianshu.io/upload_images/119178-aaa454e0c6548765.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="6EF23DC2-5B4A-4887-AD01-DB8BA5509378.png"></p>
+<h6 id="Perfect添加MySQL库的依赖"><a href="#Perfect添加MySQL库的依赖" class="headerlink" title="Perfect添加MySQL库的依赖"></a>Perfect添加MySQL库的依赖</h6><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> PackageDescription</div><div class="line"><span class="keyword">let</span> package = <span class="type">Package</span>(</div><div class="line">    name: <span class="string">"Ranking_Service"</span>, <span class="comment">// Perfect的工程名 可自行修改</span></div><div class="line">	targets: [],</div><div class="line">	dependencies: [</div><div class="line">		.<span class="type">Package</span>(url: <span class="string">"https://github.com/PerfectlySoft/Perfect-HTTPServer.git"</span>, majorVersion: <span class="number">2</span>),</div><div class="line">		<span class="comment">//MySql数据库依赖包</span></div><div class="line">        .<span class="type">Package</span>(url:<span class="string">"https://github.com/PerfectlySoft/Perfect-MySQL.git"</span>, majorVersion: <span class="number">2</span>, minor: <span class="number">0</span>)</div><div class="line">    ]</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>重新运行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">swift package generate-xcodeproj</div></pre></td></tr></table></figure>
+<h6 id="访问MySQL"><a href="#访问MySQL" class="headerlink" title="访问MySQL"></a>访问MySQL</h6><p>我们在main.swift文件添加如下代码<br>添加 <code>import MySQL</code></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> testHost = <span class="string">"127.0.0.1"</span></div><div class="line"><span class="keyword">let</span> testUser = <span class="string">"root"</span></div><div class="line"><span class="comment">// PLEASE change to whatever your actual password is before running these tests</span></div><div class="line"><span class="keyword">let</span> testPassword = <span class="string">"123456"</span></div><div class="line"><span class="keyword">let</span> testSchema = <span class="string">"Test"</span></div></pre></td></tr></table></figure>
+<p>请求MySQL,下面官方请求MySQL的例子<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> dataMysql = <span class="type">MySQL</span>()</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">func</span> <span class="title">useMysql</span><span class="params">(<span class="number">_</span> request: HTTPRequest, response: HTTPResponse)</span></span> &#123;</div><div class="line"></div><div class="line">    <span class="comment">// need to make sure something is available.</span></div><div class="line">    <span class="keyword">guard</span> dataMysql.connect(host: testHost, user: testUser, password: testPassword ) <span class="keyword">else</span> &#123;</div><div class="line">        <span class="type">Log</span>.info(message: <span class="string">"Failure connecting to data server <span class="subst">\(testHost)</span>"</span>)</div><div class="line">        <span class="keyword">return</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">defer</span> &#123;</div><div class="line">        dataMysql.close()  <span class="comment">// defer ensures we close our db connection at the end of this request</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//set database to be used, this example assumes presence of a users table and run a raw query, return failure message on a error</span></div><div class="line">    <span class="keyword">guard</span> dataMysql.selectDatabase(named: testSchema) &amp;&amp; dataMysql.query(statement: <span class="string">"select * from Person limit 1"</span>) <span class="keyword">else</span> &#123;</div><div class="line">        <span class="type">Log</span>.info(message: <span class="string">"Failure: <span class="subst">\(dataMysql.errorCode()</span>) <span class="subst">\(dataMysql.errorMessage()</span>)"</span>)</div><div class="line"></div><div class="line">        <span class="keyword">return</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//store complete result set</span></div><div class="line">    <span class="keyword">let</span> results = dataMysql.storeResults()</div><div class="line"></div><div class="line">    <span class="comment">//setup an array to store results</span></div><div class="line">    <span class="keyword">var</span> resultArray = [[<span class="type">String</span>?]]()</div><div class="line"></div><div class="line">    <span class="keyword">while</span> <span class="keyword">let</span> row = results?.next() &#123;</div><div class="line">        resultArray.append(row)</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//return array to http response</span></div><div class="line">    response.appendBody(string: <span class="string">"&lt;html&gt;&lt;title&gt;Mysql Test&lt;/title&gt;&lt;body&gt;<span class="subst">\(resultArray.debugDescription)</span>&lt;/body&gt;&lt;/html&gt;"</span>)</div><div class="line">    response.completed()</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>添加路演<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> routes = <span class="type">Routes</span>()</div><div class="line">routes.add(method: .<span class="keyword">get</span>, uri: <span class="string">"/t"</span>, handler: &#123;</div><div class="line">        request, response <span class="keyword">in</span></div><div class="line">    useMysql(request, response: response)</div><div class="line">    &#125;</div><div class="line">)</div></pre></td></tr></table></figure></p>
+<p>运行工程，打开<code>MySQL</code>，浏览器中打开，访问<code>http://localhost:8181/t</code><br>就看到了:<code>[[Optional(&quot;id&quot;)]]</code></p>
   
 	</div>
 
@@ -251,7 +251,7 @@ Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网�
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2017/04/10/Swift3.0服务端开发-让Perfect跑起来/" data-title="Swift3.0服务端开发-让Perfect跑起来 | 走心的开发者" data-tsina="2367296511" class="share clearfix">
+	  <div data-url="http://yoursite.com/2017/04/14/Swift3-0服务端开发-MySQL数据/" data-title="Swift3.0服务端开发-MySQL数据 | 走心的开发者" data-tsina="2367296511" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -275,19 +275,11 @@ Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网�
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/04/13/Swift3-0服务端开发-爬虫/" title="Swift3.0服务端开发-爬虫">
-  <strong>上一篇：</strong><br/>
-  <span>
-  Swift3.0服务端开发-爬虫</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2017/01/18/如何创建私有podspec/"  title="如何创建私有podspec">
+<a href="/2017/04/13/Swift3-0服务端开发-爬虫/"  title="Swift3.0服务端开发-爬虫">
  <strong>下一篇：</strong><br/> 
- <span>如何创建私有podspec
+ <span>Swift3.0服务端开发-爬虫
 </span>
 </a>
 </div>
@@ -322,7 +314,7 @@ Perfect-Github地址：https://github.com/PerfectlySoft/PerfectPerfect的官网�
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#Perfect框架简介"><span class="toc-number">1.</span> <span class="toc-text">Perfect框架简介</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#获取Perfect框架的模板"><span class="toc-number">2.</span> <span class="toc-text">获取Perfect框架的模板</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#编译模板"><span class="toc-number">3.</span> <span class="toc-text">编译模板</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#生成Xcode项目"><span class="toc-number">4.</span> <span class="toc-text">生成Xcode项目</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#安装MySQL"><span class="toc-number">1.</span> <span class="toc-text">安装MySQL</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Perfect添加MySQL库的依赖"><span class="toc-number">2.</span> <span class="toc-text">Perfect添加MySQL库的依赖</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#访问MySQL"><span class="toc-number">3.</span> <span class="toc-text">访问MySQL</span></a></li></ol>
  
   </div>
 

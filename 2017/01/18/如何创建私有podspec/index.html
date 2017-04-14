@@ -4,33 +4,30 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>如何使用CocoaPods | 走心的开发者</title>
+    <title>如何创建私有podspec | 走心的开发者</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="swift">
     
 
     
-    <meta name="description" content="更新升级10.11 cocoapods安装出问题最简单的解决方法这是因为10.11把cocoapods直接干掉了123sudo gem install -n /usr/local/bin cocoapods再加一句，完美解决sudo xcode-select --switch /Applications/Xcode.app
-使用CocoaPods做依赖管理，使我们的工程更加自动化的、集中的、简单直">
+    <meta name="description" content="创建一个私有的podspec包括如下那么几个步骤：12345671.创建并设置一个私有的Spec Repo。2.创建Pod的所需要的项目工程文件，并且有可访问的项目版本控制地址。3.创建Pod所对应的podspec文件。4.本地测试配置好的podspec文件是否可用。5.向私有的Spec Repo中提交podspec。6.在个人项目中的Podfile中增加刚刚制作的好的Pod并使用。7.更新维护p">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何使用CocoaPods">
-<meta property="og:url" content="http://yoursite.com/2015/01/01/如何使用CocoaPods/index.html">
+<meta property="og:title" content="如何创建私有podspec">
+<meta property="og:url" content="http://yoursite.com/2017/01/18/如何创建私有podspec/index.html">
 <meta property="og:site_name" content="走心的开发者">
-<meta property="og:description" content="更新升级10.11 cocoapods安装出问题最简单的解决方法这是因为10.11把cocoapods直接干掉了123sudo gem install -n /usr/local/bin cocoapods再加一句，完美解决sudo xcode-select --switch /Applications/Xcode.app
-使用CocoaPods做依赖管理，使我们的工程更加自动化的、集中的、简单直">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-a23429378250ceb8.png">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-f908c2544a61a40d.png">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-6163e161ea11ad8a.png">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-a609d9692aa916af.png">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-1382776a7a433820.png">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-018eceb26ae2e0cd.png">
-<meta property="og:updated_time" content="2017-04-14T02:53:30.000Z">
+<meta property="og:description" content="创建一个私有的podspec包括如下那么几个步骤：12345671.创建并设置一个私有的Spec Repo。2.创建Pod的所需要的项目工程文件，并且有可访问的项目版本控制地址。3.创建Pod所对应的podspec文件。4.本地测试配置好的podspec文件是否可用。5.向私有的Spec Repo中提交podspec。6.在个人项目中的Podfile中增加刚刚制作的好的Pod并使用。7.更新维护p">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-33fbc3449d0f023c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-6761f6395b6a363c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-f2e572526d16c566.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-7505b0856b9609d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-909e391c68f70ce3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-42b66e33c74f8ae3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-04-14T02:56:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何使用CocoaPods">
-<meta name="twitter:description" content="更新升级10.11 cocoapods安装出问题最简单的解决方法这是因为10.11把cocoapods直接干掉了123sudo gem install -n /usr/local/bin cocoapods再加一句，完美解决sudo xcode-select --switch /Applications/Xcode.app
-使用CocoaPods做依赖管理，使我们的工程更加自动化的、集中的、简单直">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/119178-a23429378250ceb8.png">
+<meta name="twitter:title" content="如何创建私有podspec">
+<meta name="twitter:description" content="创建一个私有的podspec包括如下那么几个步骤：12345671.创建并设置一个私有的Spec Repo。2.创建Pod的所需要的项目工程文件，并且有可访问的项目版本控制地址。3.创建Pod所对应的podspec文件。4.本地测试配置好的podspec文件是否可用。5.向私有的Spec Repo中提交podspec。6.在个人项目中的Podfile中增加刚刚制作的好的Pod并使用。7.更新维护p">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/119178-33fbc3449d0f023c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
     
     <link rel="alternative" href="/atom.xml" title="走心的开发者" type="application/atom+xml">
@@ -91,14 +88,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/01/01/如何使用CocoaPods/" title="如何使用CocoaPods" itemprop="url">如何使用CocoaPods</a>
+      <a href="/2017/01/18/如何创建私有podspec/" title="如何创建私有podspec" itemprop="url">如何创建私有podspec</a>
   </h1>
   <!--<p class="article-author">By-->
        <!---->
 		<!--<a href="/about" title="swift" target="_blank" itemprop="author">swift</a>-->
 		<!---->
   <p class="article-time">
-    <time datetime="2015-01-01T02:51:36.000Z" itemprop="datePublished">  2015-01-01</time>
+    <time datetime="2017-01-18T03:56:21.000Z" itemprop="datePublished">  2017-01-18</time>
 
       <span id="busuanzi_container_page_pv">
           总阅读<span id="busuanzi_value_page_pv"></span>次
@@ -110,59 +107,43 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#更新升级10-11-cocoapods安装出问题最简单的解决方法"><span class="toc-number">1.</span> <span class="toc-text">更新升级10.11 cocoapods安装出问题最简单的解决方法</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#更新Ruby"><span class="toc-number"></span> <span class="toc-text">更新Ruby</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建配置Podfile"><span class="toc-number"></span> <span class="toc-text">创建配置Podfile</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装开源库到你的工程中。"><span class="toc-number"></span> <span class="toc-text">安装开源库到你的工程中。</span></a>
+			
 		
 		</div>
 		
-		<h6 id="更新升级10-11-cocoapods安装出问题最简单的解决方法"><a href="#更新升级10-11-cocoapods安装出问题最简单的解决方法" class="headerlink" title="更新升级10.11 cocoapods安装出问题最简单的解决方法"></a>更新升级10.11 cocoapods安装出问题最简单的解决方法</h6><p>这是因为10.11把cocoapods直接干掉了<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo gem install -n /usr/local/bin cocoapods</div><div class="line">再加一句，完美解决</div><div class="line">sudo xcode-select --<span class="keyword">switch</span> /<span class="type">Applications</span>/<span class="type">Xcode</span>.app</div></pre></td></tr></table></figure></p>
-<p>使用CocoaPods做依赖管理，使我们的工程更加自动化的、集中的、简单直观的管理第三方开源库。你不用下载开源库的源代码引入工程，不用向工程中添加Framework，不用解决开源库和开源库以及开源库和工程之间的依赖、重复问题，也不用管开源库更新等一系列问题。有了CocoaPods，你只管任性，CocoaPods会为你做好一切。</p>
-<h5 id="更新Ruby"><a href="#更新Ruby" class="headerlink" title="更新Ruby"></a>更新Ruby</h5><p>你需要会简单的使用命令行工具<br>CocoaPods唯一的限制就是在Ruby下运行，现在OS X都预装了Ruby，所以你只需要更新RubyGems到最新版本。<br>打开终端(control + space 真的很好用)，然后输入如下的命令：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gem update --system</div></pre></td></tr></table></figure></p>
-<p>会要你输入密码：<br>注意在终端中密码不显示字符，只要输完后按回车即可<br>用Ruby China替换Ruby的默认源,替换命令如下:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gem sources --remove https:<span class="comment">//rubygems.org/</span></div><div class="line"><span class="comment">//等有反应之后再敲入以下命令</span></div><div class="line">gem sources -a https:<span class="comment">//gems.ruby-china.org/</span></div><div class="line"><span class="comment">//验证是否替换成功可以执行</span></div><div class="line">gem sources -l</div></pre></td></tr></table></figure></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/119178-a23429378250ceb8.png" alt="如图所示则证明替换成功"></p>
-<p>####安装CocoaPods<br>在终端中输入如下命令：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gem install cocoapods</div></pre></td></tr></table></figure></p>
-<p>安装过程是这样的：<br><img src="http://upload-images.jianshu.io/upload_images/119178-f908c2544a61a40d.png" alt="安装完成如上图所示"></p>
-<p>在终端中输入如下命令来完成安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//将 CocoaPods Specs repository复制到你电脑上~/.cocoapods目录下</div><div class="line">pod setup</div></pre></td></tr></table></figure></p>
-<p>它需要一点时间来完成，你等就是了<br>如果安装失败 ~/.cocoapods 里面是空的，就需要重新setup<br>命令如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pod repo remove master  </div><div class="line">pod setup</div></pre></td></tr></table></figure></p>
-<p>完毕之后这个文件夹大概有 100多M，需要花费比较多时间，请耐心等待。<br>到这里你已经成功安装了CocoaPods！</p>
-<h4 id="创建配置Podfile"><a href="#创建配置Podfile" class="headerlink" title="创建配置Podfile"></a>创建配置Podfile</h4><p>Xcode新建一个HelloWorld工程<br>打开终端，进入HelloWord工程目录下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//工程的路径也可以直接拖进来     </div><div class="line">cd /Users/lifupeng/Desktop/HelloWorld</div></pre></td></tr></table></figure></p>
-<p>在HelloWorld工程下创建一个默认的Podfile<br>执行命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod init</div></pre></td></tr></table></figure></p>
-<p>用Xcode打开Podfile命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">open -a Xcode Podfile</div></pre></td></tr></table></figure></p>
-<p>Podfile是这样的：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/119178-6163e161ea11ad8a.png" alt="Xcode打开Podfile"></p>
-<p>修改类库支持的最低iOS版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">将# platform:ios, &quot;6.0&quot;修改成 ＃platform :ios, &quot;7.0&quot;</div><div class="line">告诉CocoaPods你的工程是运行在iOS7下</div></pre></td></tr></table></figure></p>
-<p>为了让CocoaPods的引入不显示警告，在Podfile最上方加上：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">inhibit_all_warnings!</div><div class="line">// 也可以单独设置打开编译警告就好了</div><div class="line">pod &apos;Alamofire&apos;, &apos;~&gt; 3.0.0-beta.3&apos;, :inhibit_warnings =&gt; true</div></pre></td></tr></table></figure></p>
-<p>最后Podfile配置是这样的：<br><img src="http://upload-images.jianshu.io/upload_images/119178-a609d9692aa916af.png" alt="Podfile配置"></p>
-<p>####搜索第三方开源库<br>以搜索AFNetworking为例，搜索命令如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod search AFNetworking</div></pre></td></tr></table></figure></p>
-<p>搜索结果如下：<br><img src="http://upload-images.jianshu.io/upload_images/119178-1382776a7a433820.png" alt="pod search AFNetworking结果"><br>把下面内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod &apos;AFNetworking&apos;, &apos;~&gt; 2.5.0&apos;</div></pre></td></tr></table></figure></p>
-<p>添加到Podfile中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">target &apos;HelloWorld&apos; do</div><div class="line"></div><div class="line">pod &apos;AFNetworking&apos;, &apos;~&gt; 2.5.0&apos;</div><div class="line"></div><div class="line">end</div></pre></td></tr></table></figure></p>
-<p>然后保存关闭</p>
-<h4 id="安装开源库到你的工程中。"><a href="#安装开源库到你的工程中。" class="headerlink" title="安装开源库到你的工程中。"></a>安装开源库到你的工程中。</h4><p>在终端中输入下面命令：（确保在终端的路径在项目目录下）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod install</div></pre></td></tr></table></figure></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/119178-018eceb26ae2e0cd.png" alt="至此 你已经成功的把AFNetworking添加到工程中了"></p>
-<pre><code>[!] From now on use `ShowTracker.xcworkspace`
-</code></pre><p>正如上面的警告提醒，从现在开始，你必须使用HelloWorld.xcworkspace来打开该项目。</p>
-<p>为了让CocoaPods的引入不显示警告，在Podfile最上方加上：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">inhibit_all_warnings!</div></pre></td></tr></table></figure></p>
-<p>重新运行pod install，编译项目，此时你应该看到警告已经不显示了。</p>
-<p>PS: 对Podfile修改安装之后编译项目，可能会出现如下警告 ：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">The sandbox is not in sync with the Podfile.lock. Run &apos;pod install&apos; or update your CocoaPods installation.</div></pre></td></tr></table></figure></p>
-<p>此时，正确的做法是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1.Project Cleanup</div><div class="line">2.Remove all libPods*.a in  Linked Frameworks and Libraries</div><div class="line">3.Update CocoaPods using the command  pod install</div></pre></td></tr></table></figure></p>
-<p>测试：<br>    添加 #import <afnetworking.h>头文件<br>从此引用第三方库如此简单，希望各位用的爽</afnetworking.h></p>
-<p>###CocoaPods常用命令</p>
-<pre><code>1、pod install
-</code></pre><p>根据Podfile文件指定的内容，安装依赖库，如果有Podfile.lock文件而且对应的Podfile文件未被修改，则会根据Podfile.lock文件指定的版本安装。<br>每次更新了Podfile文件时，都需要重新执行该命令，以便重新安装Pods依赖库。</p>
-<pre><code>2、pod update
-</code></pre><p>若果Podfile中指定的依赖库版本不是写死的，当对应的依赖库有了更新，无论有没有Podfile.lock文件都会去获取Podfile文件描述的允许获取到的最新依赖库版本。</p>
-<pre><code>3、pod search
-</code></pre><p>命令格式为：</p>
-<pre><code>$ pod search AFNetworking  AFNetworking为参数
-</code></pre><p>4、查看版本</p>
-<pre><code>pod --version
-</code></pre><p>5、卸载 cocoapods</p>
-<pre><code>sudo gem uninstall cocoapods
-</code></pre><p>今天比较闲，就把CocoaPods升级到0.36.0正式版（以前写Swift的时候用的预览版）。然后就郁闷了，不管安装什么第三方都会出现类似于：<br>[!] Unable to satisfy the following requirements: - `AFNetworking (~&gt; 2.5.1)</p>
-<pre><code> 一通的搜索后找到原因，因为GFW的缘故。解决方法：
-pod repo remove master
-pod repo add master https://gitcafe.com/akuandev/Specs.git
-pod repo update
-</code></pre>  
+		<p>创建一个私有的podspec包括如下那么几个步骤：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">1.创建并设置一个私有的Spec Repo。</div><div class="line">2.创建Pod的所需要的项目工程文件，并且有可访问的项目版本控制地址。</div><div class="line">3.创建Pod所对应的podspec文件。</div><div class="line">4.本地测试配置好的podspec文件是否可用。</div><div class="line">5.向私有的Spec Repo中提交podspec。</div><div class="line">6.在个人项目中的Podfile中增加刚刚制作的好的Pod并使用。</div><div class="line">7.更新维护pod spec。</div></pre></td></tr></table></figure></p>
+<p>###创建并设置一个私有的Spec Repo<br>创建一个仓库<a href="https://github.com/TRZXDev/TRZX_Repositories" target="_blank" rel="external">https://github.com/TRZXDev/TRZX_Repositories</a><br><img src="http://upload-images.jianshu.io/upload_images/119178-33fbc3449d0f023c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-01-16 13.55.34.png"></p>
+<p>本地添加私有源<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pod repo add [Private Repo Name] [GitHub HTTPS clone URL]</div><div class="line">---------------------------------------------------------</div><div class="line">pod repo add TRZX_Repositories https://github.com/TRZXDev/TRZX_Repositories</div></pre></td></tr></table></figure></p>
+<p>此时如果成功的话cd到~/.cocoapods/repos目录下就可以看到TRZX_Repositories这个目录了。<br><img src="http://upload-images.jianshu.io/upload_images/119178-6761f6395b6a363c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-01-16 14.04.26.png"><br>至此第一步创建私有Spec Repo完成。</p>
+<p>###创建Pod的所需要的项目工程文件，并且有可访问的项目版本控制地址<br>创建一个Xcode项目 TRZX_Test<br>在TRZX_Test项目下创建名为TRZX_Test的文件夹，后面我们需要做成私有pod的文件均放在该文件夹下<br>在TRZX_Test文件下面添加TRZX_Test文件</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/119178-f2e572526d16c566.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-01-17 13.47.04.png"></p>
+<p>在gitHub新建一个project名为TRZX_Test项目<br><img src="http://upload-images.jianshu.io/upload_images/119178-7505b0856b9609d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-01-17 13.48.12.png"></p>
+<p>关联本地项目推送至gitHub<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">echo &quot;# TRZX_Test&quot; &gt;&gt; README.md</div><div class="line">git init</div><div class="line">git add .</div><div class="line">git commit -m &quot;first commit&quot;</div><div class="line">git remote add origin https://github.com/TRZXDev/TRZX_Test.git</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure></p>
+<p>假如我们的源是origin，分支是master，那么我们 需要这样写需要知道，我们的源可以是本地的路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git pull origin master --allow-unrelated-histories</div></pre></td></tr></table></figure></p>
+<p>因cocoaPods强制添加开源许可文件，在TRZX_Test工程目录下创建FILE_LICENSE<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo MIT&gt;FILE_LICENSE</div></pre></td></tr></table></figure></p>
+<p>创建podspec文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod spec create TRZX_Test</div></pre></td></tr></table></figure></p>
+<p>执行命令vim .TRZX_Test.podspec编辑podspec文件</p>
+<p>0.s.summary<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">s.summary      = &quot;Testing  TRZX_Test.&quot;</div></pre></td></tr></table></figure></p>
+<p>1.s.description  添加描述<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">s.description  = &lt;&lt;-DESC</div><div class="line">                          Testing Private Podspec.</div><div class="line">                 DESC</div></pre></td></tr></table></figure></p>
+<p>2.s.platform  最低支持iOS版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># s.platform     = :ios</div><div class="line">  s.platform     = :ios, &quot;9.0&quot;</div></pre></td></tr></table></figure></p>
+<p>3.s.homepage<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">s.homepage     = &quot;https://github.com/TRZXDev/TRZX_Test&quot;</div></pre></td></tr></table></figure></p>
+<p>4.s.license<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#s.license      = &quot;MIT (example)&quot;</div><div class="line">s.license      = &#123; :type =&gt; &quot;MIT&quot;, :file =&gt; &quot;FILE_LICENSE&quot; &#125;</div></pre></td></tr></table></figure></p>
+<p>5.s.source<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">s.source       = &#123; :git =&gt; &quot;https://github.com/TRZXDev/TRZX_Test.git&quot;, :tag =&gt; &quot;#&#123;s.version&#125;&quot; &#125;</div></pre></td></tr></table></figure></p>
+<p>6.s.source_files<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">s.source_files  = &quot;CRProtocolManager&quot;, &quot;CRProtocolManager/**/*.&#123;h,m&#125;&quot;</div></pre></td></tr></table></figure></p>
+<p>退出编辑执行命令<br>编辑完podspec文件后，需要验证一下这个文件是否可用，如果有任何WARNING或者ERROR都是不可以的，它就不能被添加到Spec Repo中，不过xcode的WARNING是可以存在的，验证需要执行一下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod lib lint</div></pre></td></tr></table></figure></p>
+<p>当你看到<br><img src="http://upload-images.jianshu.io/upload_images/119178-909e391c68f70ce3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-01-17 14.34.50.png"><br>时，说明验证通过了，不过这只是这个podspec文件是合格的，不一定说明这个Pod是可以用的，我们需要在本地做一下验证</p>
+<p>把刚才的修改Add到本地<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -m &apos;编辑.podspec&apos;</div></pre></td></tr></table></figure></p>
+<p>添加tag 一定要和podspec中的version一致<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git tag 0.0.1</div></pre></td></tr></table></figure></p>
+<p>把刚才添加的tag提交上去<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin master --tags</div></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/119178-42b66e33c74f8ae3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-01-17 14.28.28.png"></p>
+<p>把TRZX_Test项目添加到准备工作中的私有源仓库TRZX_Repositories<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod repo push TRZX_Repositories TRZX_Test.podspec --verbose --allow-warnings</div></pre></td></tr></table></figure></p>
+<p>执行成功后<br>pod search TRZX_Test应该就能搜索到了<br>如果发现搜索不到刚才的组件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm ~/Library/Caches/CocoaPods/search_index.json</div></pre></td></tr></table></figure></p>
+<p>然后在进行搜索就可以搜索到了</p>
+<p>###注意<br>此时由于你当前工程B依赖的工程是私有库，于是会报错：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- ERROR | [iOS] unknown: Encountered an unknown error</div></pre></td></tr></table></figure></p>
+<p>pod sepc lint 文件名.podspec –sources=’<a href="http://[privateLibName]/cocoaspecs.git,https://github.com/CocoaPods/Specs.git" target="_blank" rel="external">http://[privateLibName]/cocoaspecs.git,https://github.com/CocoaPods/Specs.git</a>‘</p>
+<p>报错 ···<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">error: include of non-modular header inside framework module ··· [-Werror,-Wnon-modular-include-in-framework-module]</div></pre></td></tr></table></figure></p>
+<p>解决办法：在pod lib lint 或者 pod spec lint 以及 pod repo push ….时候加上   –use-libraries<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">pod lib lint --use-libraries</div><div class="line">#或者</div><div class="line">pod spec lint --use-libraries</div><div class="line"></div><div class="line">#当然，在提交的时候也要加上</div><div class="line">pod repo push &lt;repoName&gt; &lt;podspec&gt; --use-libraries</div><div class="line"></div><div class="line">#或者</div><div class="line">pod repo push TRZX_Repositories TRZX_Test.podspec --verbose --allow-warnings --use-libraries</div></pre></td></tr></table></figure></p>
+  
 	</div>
 
 		<!--打赏功能-->
@@ -286,7 +267,7 @@ pod repo update
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2015/01/01/如何使用CocoaPods/" data-title="如何使用CocoaPods | 走心的开发者" data-tsina="2367296511" class="share clearfix">
+	  <div data-url="http://yoursite.com/2017/01/18/如何创建私有podspec/" data-title="如何创建私有podspec | 走心的开发者" data-tsina="2367296511" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -311,13 +292,21 @@ pod repo update
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/12/06/iOS自动化构建工具/" title="iOS自动化构建工具">
+ <a href="/2017/04/01/Hexo博客搭建/" title="Hexo博客搭建">
   <strong>上一篇：</strong><br/>
   <span>
-  iOS自动化构建工具</span>
+  Hexo博客搭建</span>
 </a>
 </div>
 
+
+<div class="next">
+<a href="/2016/12/06/iOS自动化构建工具/"  title="iOS自动化构建工具">
+ <strong>下一篇：</strong><br/> 
+ <span>iOS自动化构建工具
+</span>
+</a>
+</div>
 
 </nav>
 
@@ -349,7 +338,7 @@ pod repo update
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#更新升级10-11-cocoapods安装出问题最简单的解决方法"><span class="toc-number">1.</span> <span class="toc-text">更新升级10.11 cocoapods安装出问题最简单的解决方法</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#更新Ruby"><span class="toc-number"></span> <span class="toc-text">更新Ruby</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建配置Podfile"><span class="toc-number"></span> <span class="toc-text">创建配置Podfile</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装开源库到你的工程中。"><span class="toc-number"></span> <span class="toc-text">安装开源库到你的工程中。</span></a>
+ 
  
   </div>
 

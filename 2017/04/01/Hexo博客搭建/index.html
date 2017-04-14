@@ -21,7 +21,7 @@
 <meta property="og:description" content="环境Mac os安装Homebrewg软件包
 123ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;brew install caskroom/cask/brew-cask  // Homebrew Cask，该包管理器会自动配置好环境变量
 安装No">
-<meta property="og:updated_time" content="2017-04-14T02:32:19.000Z">
+<meta property="og:updated_time" content="2017-04-14T02:44:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客搭建">
 <meta name="twitter:description" content="环境Mac os安装Homebrewg软件包
@@ -145,7 +145,7 @@
 <p>域名解析：<br>如果将域名指向一个域名，实现与被指向域名相同的访问效果，需要增加CNAME记录。登录万网，在你购买的域名后边点击：解析 –&gt; 添加解析<br>记录类型：CNAME<br>主机记录：将域名解析为example.com（不带www），填写@或者不填写<br>记录值：miaodalive.github.io. (不要忘记最后的<code>.</code>，<code>miaodalive</code>改为你自己的用户名)，点击保存即可</p>
 <p>此时，点击访问<code>http://miaodalive.com</code>和访问<code>http://nnianhou-.github.io</code>效果一致，大功告成！</p>
 <h6 id="将个人博客同时部署到-GitHub-和-Coding"><a href="#将个人博客同时部署到-GitHub-和-Coding" class="headerlink" title="将个人博客同时部署到 GitHub 和 Coding"></a>将个人博客同时部署到 GitHub 和 Coding</h6><p>首先到 Coding 上注册并开一个项目，项目名称和用户个性后缀相同（方便二级域名访问博客），拿到项目的 https 地址<code>https://git.coding.net/nnianhou/nnianhou.git</code><br>打开本地 blog 目录下的 <code>_config.yml</code> 文件，修改如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository:</div><div class="line">	          github: https://github.com/nnianhou-/nnianhou-.github.io.git</div><div class="line">             coding: https://git.coding.net/nnianhou/nnianhou.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: </div><div class="line">            github: https://github.com/nnianhou-/nnianhou-.github.io.git</div><div class="line">            coding: https://git.coding.net/nnianhou/nnianhou.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
 <p>cd 到本地 <code>blog/source</code> 目录下执行如下命令新建 <code>Staticfile</code> 文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">touch Staticfile  #名字必须是Staticfile</div></pre></td></tr></table></figure>
 <p>原因是 <code>coding.net</code> 需要以这个文件来作为静态文件部署的标志，就是说看到这个 <code>Staticfile</code> 就知道按照静态文件来发布。</p>
@@ -154,6 +154,8 @@
 <p>个人域名添加两条 CNAME 解析。将 miaodalive.github.io. 解析为 [海外] ，将 miaodalive.coding.me. 解析为 [默认]</p>
 <p>这样就是为了从国内访问 miaodalive.com 就是访问 Coding 上的博客项目，从国外访问 miaodalive.com 就是访问 GitHub 上的博客项目。</p>
 <p>到 Coding 上的博客项目主页，点击 Pages服务 输入部署分支 master 立即开启</p>
+<p>这样就可以访问自己在 Coding 上的个人博客了 miaodalive.coding.me/miaodalive 如果像这样你的用户后缀名与博客项目名称相同你还可以省略项目名称直接访问 miaodalive.coding.me</p>
+<p>添加域名绑定，输入个人域名就 OK 了，可能需要耐心等待几分钟，这样在国内访问自己的博客就快得多了。<br>试了一下在国内访问 miaodalive.com 拦不住 要飞起来了😂</p>
 <h6 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h6><p>如果要修改主题，只需要将主题文件clone到<code>themes</code>目录下，并修改<code>_config.yml</code>配置文件即可<br>进入hexo的themes目录，clone主题</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone git@github.com:wuchong/jacman.git</div></pre></td></tr></table></figure>
 <p>然后修改配置文件的theme参数为<code>jacman</code>即可</p>

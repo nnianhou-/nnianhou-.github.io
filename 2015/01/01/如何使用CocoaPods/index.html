@@ -11,25 +11,25 @@
     
 
     
-    <meta name="description" content="#####更新升级10.11 cocoapods安装出问题最简单的解决方法这是因为10.11把cocoapods直接干掉了123sudo gem install -n /usr/local/bin cocoapods再加一句，完美解决sudo xcode-select --switch /Applications/Xcode.app
-使用CocoaPods做依赖管理，使我们的工程更加自动化的、集中">
+    <meta name="description" content="更新升级10.11 cocoapods安装出问题最简单的解决方法这是因为10.11把cocoapods直接干掉了123sudo gem install -n /usr/local/bin cocoapods再加一句，完美解决sudo xcode-select --switch /Applications/Xcode.app
+使用CocoaPods做依赖管理，使我们的工程更加自动化的、集中的、简单直">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何使用CocoaPods">
 <meta property="og:url" content="http://yoursite.com/2015/01/01/如何使用CocoaPods/index.html">
 <meta property="og:site_name" content="走心的开发者">
-<meta property="og:description" content="#####更新升级10.11 cocoapods安装出问题最简单的解决方法这是因为10.11把cocoapods直接干掉了123sudo gem install -n /usr/local/bin cocoapods再加一句，完美解决sudo xcode-select --switch /Applications/Xcode.app
-使用CocoaPods做依赖管理，使我们的工程更加自动化的、集中">
+<meta property="og:description" content="更新升级10.11 cocoapods安装出问题最简单的解决方法这是因为10.11把cocoapods直接干掉了123sudo gem install -n /usr/local/bin cocoapods再加一句，完美解决sudo xcode-select --switch /Applications/Xcode.app
+使用CocoaPods做依赖管理，使我们的工程更加自动化的、集中的、简单直">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-a23429378250ceb8.png">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-f908c2544a61a40d.png">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-6163e161ea11ad8a.png">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-a609d9692aa916af.png">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-1382776a7a433820.png">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/119178-018eceb26ae2e0cd.png">
-<meta property="og:updated_time" content="2017-04-14T02:52:12.000Z">
+<meta property="og:updated_time" content="2017-04-14T02:53:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何使用CocoaPods">
-<meta name="twitter:description" content="#####更新升级10.11 cocoapods安装出问题最简单的解决方法这是因为10.11把cocoapods直接干掉了123sudo gem install -n /usr/local/bin cocoapods再加一句，完美解决sudo xcode-select --switch /Applications/Xcode.app
-使用CocoaPods做依赖管理，使我们的工程更加自动化的、集中">
+<meta name="twitter:description" content="更新升级10.11 cocoapods安装出问题最简单的解决方法这是因为10.11把cocoapods直接干掉了123sudo gem install -n /usr/local/bin cocoapods再加一句，完美解决sudo xcode-select --switch /Applications/Xcode.app
+使用CocoaPods做依赖管理，使我们的工程更加自动化的、集中的、简单直">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/119178-a23429378250ceb8.png">
 
     
@@ -110,11 +110,11 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#更新Ruby"><span class="toc-number">1.</span> <span class="toc-text">更新Ruby</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建配置Podfile"><span class="toc-number"></span> <span class="toc-text">创建配置Podfile</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装开源库到你的工程中。"><span class="toc-number"></span> <span class="toc-text">安装开源库到你的工程中。</span></a>
+			<ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#更新升级10-11-cocoapods安装出问题最简单的解决方法"><span class="toc-number">1.</span> <span class="toc-text">更新升级10.11 cocoapods安装出问题最简单的解决方法</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#更新Ruby"><span class="toc-number"></span> <span class="toc-text">更新Ruby</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建配置Podfile"><span class="toc-number"></span> <span class="toc-text">创建配置Podfile</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装开源库到你的工程中。"><span class="toc-number"></span> <span class="toc-text">安装开源库到你的工程中。</span></a>
 		
 		</div>
 		
-		<p>#####更新升级10.11 cocoapods安装出问题最简单的解决方法<br>这是因为10.11把cocoapods直接干掉了<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo gem install -n /usr/local/bin cocoapods</div><div class="line">再加一句，完美解决</div><div class="line">sudo xcode-select --<span class="keyword">switch</span> /<span class="type">Applications</span>/<span class="type">Xcode</span>.app</div></pre></td></tr></table></figure></p>
+		<h6 id="更新升级10-11-cocoapods安装出问题最简单的解决方法"><a href="#更新升级10-11-cocoapods安装出问题最简单的解决方法" class="headerlink" title="更新升级10.11 cocoapods安装出问题最简单的解决方法"></a>更新升级10.11 cocoapods安装出问题最简单的解决方法</h6><p>这是因为10.11把cocoapods直接干掉了<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo gem install -n /usr/local/bin cocoapods</div><div class="line">再加一句，完美解决</div><div class="line">sudo xcode-select --<span class="keyword">switch</span> /<span class="type">Applications</span>/<span class="type">Xcode</span>.app</div></pre></td></tr></table></figure></p>
 <p>使用CocoaPods做依赖管理，使我们的工程更加自动化的、集中的、简单直观的管理第三方开源库。你不用下载开源库的源代码引入工程，不用向工程中添加Framework，不用解决开源库和开源库以及开源库和工程之间的依赖、重复问题，也不用管开源库更新等一系列问题。有了CocoaPods，你只管任性，CocoaPods会为你做好一切。</p>
 <h5 id="更新Ruby"><a href="#更新Ruby" class="headerlink" title="更新Ruby"></a>更新Ruby</h5><p>你需要会简单的使用命令行工具<br>CocoaPods唯一的限制就是在Ruby下运行，现在OS X都预装了Ruby，所以你只需要更新RubyGems到最新版本。<br>打开终端(control + space 真的很好用)，然后输入如下的命令：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gem update --system</div></pre></td></tr></table></figure></p>
 <p>会要你输入密码：<br>注意在终端中密码不显示字符，只要输完后按回车即可<br>用Ruby China替换Ruby的默认源,替换命令如下:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gem sources --remove https:<span class="comment">//rubygems.org/</span></div><div class="line"><span class="comment">//等有反应之后再敲入以下命令</span></div><div class="line">gem sources -a https:<span class="comment">//gems.ruby-china.org/</span></div><div class="line"><span class="comment">//验证是否替换成功可以执行</span></div><div class="line">gem sources -l</div></pre></td></tr></table></figure></p>
@@ -349,7 +349,7 @@ pod repo update
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#更新Ruby"><span class="toc-number">1.</span> <span class="toc-text">更新Ruby</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建配置Podfile"><span class="toc-number"></span> <span class="toc-text">创建配置Podfile</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装开源库到你的工程中。"><span class="toc-number"></span> <span class="toc-text">安装开源库到你的工程中。</span></a>
+ <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#更新升级10-11-cocoapods安装出问题最简单的解决方法"><span class="toc-number">1.</span> <span class="toc-text">更新升级10.11 cocoapods安装出问题最简单的解决方法</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#更新Ruby"><span class="toc-number"></span> <span class="toc-text">更新Ruby</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建配置Podfile"><span class="toc-number"></span> <span class="toc-text">创建配置Podfile</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装开源库到你的工程中。"><span class="toc-number"></span> <span class="toc-text">安装开源库到你的工程中。</span></a>
  
   </div>
 
